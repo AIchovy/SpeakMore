@@ -1,0 +1,485 @@
+{
+  "date": "2026-09-16",
+  "scope": "release GUI with public synthetic capture source; real UI/IPC/actor/VAD/ASR and resource-coalition sampling; no physical microphone or release gate",
+  "hardware": "Apple M4, Mac16,1, 32 GiB; macOS 15.6.1 (24G90)",
+  "input": {
+    "sha256": "eb1eb008904465b74c304aad8342e8c7d3c6e61ffe9f66adcaca9cf0f76a93f4",
+    "samples": 4800000,
+    "sample_rate": 16000,
+    "duration_ms": 300000,
+    "channels": 1,
+    "construction": "public en.wav plus 16000 zero samples, cycled to 4800000; auto language"
+  },
+  "profile": "sensevoice-tiled256-v1",
+  "measurement": {
+    "schema": 1,
+    "sampling_finished": true,
+    "scope": "isolated GUI app resource coalition; synthetic public audio only if that explicit build is running",
+    "claim": "Sampled process counters only; not physical recording, natural speech quality, minimum hardware or a release gate",
+    "platform": "macOS-15.6.1-arm64-arm-64bit",
+    "app_id": "com.speakmore.modelcheck.20260916",
+    "started_epoch_ms": 1789541851500,
+    "app": "target/release/bundle/macos/SpeakMore Model Check.app",
+    "root_pid": 74124,
+    "root_started": 22225068525989,
+    "coalition": 143960,
+    "sources": {
+      "scripts/diagnostics/macos-app-memory.c": "a9f4087116dbed8cd4b35d97550a7b1d32663bfb100423a51059a9473dd16258",
+      "scripts/diagnostics/macos-app-memory.py": "0a03767635e699d9632bbd3f3fd85b60bed1b688ea56c2b3522be45a57221e08",
+      "target/release/bundle/macos/SpeakMore Model Check.app/Contents/MacOS/speakmore-desktop": "06cb3b198ae379d6993fee0f85befdfb81cbcec802661629f89dec486c75b79e",
+      ".cache/app-memory-study/run-xtiqz41v/app-memory": "5c7c8e8f1b1e9b12c3191e790e77d3582a19c74641f27e7f09973d35882d538f",
+      "target/release/bundle/macos/SpeakMore Model Check.app/Contents/Resources/workers/speakmore-sensevoice-worker": "2697f98f7ed8b805c3094ac4e3e8c2ec50794b747530d5a9f87710802d9353d1",
+      "target/release/bundle/macos/SpeakMore Model Check.app/Contents/Resources/workers/speakmore-asr-worker": "e29a96cf5b747042834079d35dfe024165ceab6fedc0146eaf12ec49e3a5c162"
+    },
+    "target_interval_ms": 100,
+    "requested_seconds": 420,
+    "complete_samples": 3804,
+    "incomplete_samples": 1,
+    "identities": {
+      "74124:22225068525989": {
+        "pid": 74124,
+        "parent": 1,
+        "started": 22225068525989,
+        "path": "<repo>/target/release/bundle/macos/SpeakMore Model Check.app/Contents/MacOS/speakmore-desktop",
+        "rss_bytes": 106463232,
+        "footprint_bytes": 50136168,
+        "peak_footprint_bytes": 50152552,
+        "first_seen_ms": 0.165,
+        "last_seen_ms": 388125.797
+      },
+      "74125:22225091548824": {
+        "pid": 74125,
+        "parent": 1,
+        "started": 22225091548824,
+        "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.GPU.xpc/Contents/MacOS/com.apple.WebKit.GPU",
+        "rss_bytes": 47300608,
+        "footprint_bytes": 88179408,
+        "peak_footprint_bytes": 88703696,
+        "first_seen_ms": 0.165,
+        "last_seen_ms": 388125.797
+      },
+      "74126:22225091836359": {
+        "pid": 74126,
+        "parent": 1,
+        "started": 22225091836359,
+        "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "rss_bytes": 149127168,
+        "footprint_bytes": 88261448,
+        "peak_footprint_bytes": 88490824,
+        "first_seen_ms": 0.165,
+        "last_seen_ms": 388125.797
+      },
+      "74127:22225091957667": {
+        "pid": 74127,
+        "parent": 1,
+        "started": 22225091957667,
+        "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Networking.xpc/Contents/MacOS/com.apple.WebKit.Networking",
+        "rss_bytes": 16515072,
+        "footprint_bytes": 6914552,
+        "peak_footprint_bytes": 7913976,
+        "first_seen_ms": 0.165,
+        "last_seen_ms": 388125.797
+      },
+      "74128:22225092566088": {
+        "pid": 74128,
+        "parent": 1,
+        "started": 22225092566088,
+        "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "rss_bytes": 95584256,
+        "footprint_bytes": 56410928,
+        "peak_footprint_bytes": 56427312,
+        "first_seen_ms": 0.165,
+        "last_seen_ms": 388125.797
+      },
+      "74129:22225100181275": {
+        "pid": 74129,
+        "parent": 1,
+        "started": 22225100181275,
+        "path": "/System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/ThemeWidgetControlViewService.xpc/Contents/MacOS/ThemeWidgetControlViewService",
+        "rss_bytes": 26198016,
+        "footprint_bytes": 12042936,
+        "peak_footprint_bytes": 12059296,
+        "first_seen_ms": 0.165,
+        "last_seen_ms": 388125.797
+      },
+      "74190:22225149340220": {
+        "pid": 74190,
+        "parent": 74124,
+        "started": 22225149340220,
+        "path": "<repo>/target/release/bundle/macos/SpeakMore Model Check.app/Contents/Resources/workers/speakmore-sensevoice-worker",
+        "rss_bytes": 1250131968,
+        "footprint_bytes": 1162102344,
+        "peak_footprint_bytes": 1162102344,
+        "first_seen_ms": 1318.274,
+        "last_seen_ms": 283209.005
+      },
+      "80255:22231917805897": {
+        "pid": 80255,
+        "parent": 74124,
+        "started": 22231917805897,
+        "path": "<repo>/target/release/bundle/macos/SpeakMore Model Check.app/Contents/Resources/workers/speakmore-sensevoice-worker",
+        "rss_bytes": 1213612032,
+        "footprint_bytes": 994182656,
+        "peak_footprint_bytes": 994182656,
+        "first_seen_ms": 283311.424,
+        "last_seen_ms": 388125.797
+      }
+    },
+    "max_sum_rss_bytes": 1640497152,
+    "max_sum_footprint_bytes": 1414977632,
+    "max_main_rss_bytes": 106463232,
+    "max_members": 7,
+    "max_read_window_ms": 59.75,
+    "max_sample_gap_ms": 155.079,
+    "errors": [],
+    "max_sum_rss_bytes_at_ms": 133178.04,
+    "max_sum_footprint_bytes_at_ms": 282486.18,
+    "ended_by": "app_not_running",
+    "elapsed_seconds": 388.312,
+    "raw_sha256": "e0b3dd9846a18da7d9b4fb36730e6c6d6418426c9cec0676616ead9e8d8e520d"
+  },
+  "derived": {
+    "max_worker_count": 1,
+    "median_read_window_ms": 5.963,
+    "rss_GiB": 1.52783203125,
+    "footprint_GiB": 1.317800611257553,
+    "main_rss_MiB": 101.53125
+  },
+  "after_measurement_exit": {
+    "74124:22225068525989": {
+      "same_identity_alive": false,
+      "current": null,
+      "exit_code": 1
+    },
+    "74125:22225091548824": {
+      "same_identity_alive": false,
+      "current": null,
+      "exit_code": 1
+    },
+    "74126:22225091836359": {
+      "same_identity_alive": false,
+      "current": null,
+      "exit_code": 1
+    },
+    "74127:22225091957667": {
+      "same_identity_alive": false,
+      "current": null,
+      "exit_code": 1
+    },
+    "74128:22225092566088": {
+      "same_identity_alive": false,
+      "current": null,
+      "exit_code": 1
+    },
+    "74129:22225100181275": {
+      "same_identity_alive": false,
+      "current": null,
+      "exit_code": 1
+    },
+    "74190:22225149340220": {
+      "same_identity_alive": false,
+      "current": null,
+      "exit_code": 1
+    },
+    "80255:22231917805897": {
+      "same_identity_alive": false,
+      "current": null,
+      "exit_code": 1
+    }
+  },
+  "guard_checks": {
+    "arguments": [
+      {
+        "arguments": [],
+        "exit_code": 64,
+        "stdout": ""
+      },
+      {
+        "arguments": ["/tmp/not-an-app"],
+        "exit_code": 64,
+        "stdout": ""
+      },
+      {
+        "arguments": ["/tmp/Absent.app/Contents/MacOS/missing"],
+        "exit_code": 1,
+        "stdout": "{\"complete\":false,\"reason\":\"app_not_running\"}\n"
+      },
+      {
+        "arguments": ["/tmp/Absent.app/Contents/MacOS/missing", "-1"],
+        "exit_code": 64,
+        "stdout": ""
+      }
+    ],
+    "wrong_start_identity": {
+      "exit_code": 1,
+      "result": {
+        "complete": false,
+        "reason": "root_identity_changed"
+      }
+    }
+  },
+  "database": {
+    "integrity": "ok",
+    "schema_version": 7,
+    "settings": {
+      "revision": 7,
+      "active_model_id": "sensevoice-small-int8--449f53e709f54de54d48c2bbfa225bd5d2f69e9ad620f78c946cd69de9dc16d2",
+      "language": "auto",
+      "ui_locale": "zh-CN",
+      "delivery_mode": "manual",
+      "polish_enabled": 0,
+      "history_enabled": 0,
+      "processing_policy": "local_only"
+    },
+    "counts": {
+      "usage_events": 4,
+      "transcriptions": 0,
+      "providers": 0,
+      "dictionary_entries": 0
+    }
+  },
+  "observations": [
+    {
+      "path": ".cache/app-memory-study/ui-20260916/01-opened.json",
+      "sha256": "272b1da2d5c01bce19e8218b67b46cf872bfa14ff3f449ae7b8fa44d15cf87cf",
+      "epoch_ms": 1789541850841,
+      "result_button_count": 0,
+      "state": "other"
+    },
+    {
+      "path": ".cache/app-memory-study/ui-20260916/02-ready.json",
+      "sha256": "ba5e0d9a8de1e7dc9975d2cfaee9c988c4f4309def3540985b8e7ab73035dbf3",
+      "epoch_ms": 1789541863660,
+      "result_button_count": 0,
+      "state": "ready"
+    },
+    {
+      "path": ".cache/app-memory-study/ui-20260916/03-first-start.json",
+      "sha256": "adda49071e8ad4b9f6e9717a04782e7afa31d9fb1b6ca5d8e7951a6244396693",
+      "epoch_ms": 1789541870296,
+      "result_button_count": 0,
+      "state": "recording"
+    },
+    {
+      "path": ".cache/app-memory-study/ui-20260916/04-first-processing.json",
+      "sha256": "3e7a9aa0baccbbcdf161ac195f1f2fcb2a058d95743bf577de2fa7e82de51486",
+      "epoch_ms": 1789541877455,
+      "result_button_count": 0,
+      "state": "transcribing"
+    },
+    {
+      "path": ".cache/app-memory-study/ui-20260916/05-first-result.json",
+      "sha256": "9a4a582b4bc9f6f36bf24b69096dc807aeb82300bdedc7ac0411e52fab64302d",
+      "epoch_ms": 1789541919008,
+      "result_button_count": 1,
+      "state": "ready"
+    },
+    {
+      "path": ".cache/app-memory-study/ui-20260916/06-first-detail.json",
+      "sha256": "1a9d53864ed52ab8177313e2b47bdf39b7402574fb9aa23255cd4b0b96eaf8ef",
+      "epoch_ms": 1789541934416,
+      "result_button_count": 0,
+      "state": "other"
+    },
+    {
+      "path": ".cache/app-memory-study/ui-20260916/07-first-detail-closed.json",
+      "sha256": "d291f3a23edbfe16e0f406d356b092b587fde3986774428c316e69d6618b1dd1",
+      "epoch_ms": 1789541953984,
+      "result_button_count": 1,
+      "state": "ready"
+    },
+    {
+      "path": ".cache/app-memory-study/ui-20260916/08-second-start.json",
+      "sha256": "4ae5a95b467e207f34c6f64c21d1b67a62d76031815ce0b4e0d860285b252ec0",
+      "epoch_ms": 1789541970111,
+      "result_button_count": 1,
+      "state": "recording"
+    },
+    {
+      "path": ".cache/app-memory-study/ui-20260916/09-second-processing.json",
+      "sha256": "71ac715f7eb55af8d081d7905f922f0cb88acd14b44ec0ee26fb946a14dbd992",
+      "epoch_ms": 1789541980086,
+      "result_button_count": 1,
+      "state": "transcribing"
+    },
+    {
+      "path": ".cache/app-memory-study/ui-20260916/10-second-result.json",
+      "sha256": "dfe1748fbf58f18c6e8e5ecc6acfbbf874b2a470af9f316cfcf48528ffcca605",
+      "epoch_ms": 1789542006030,
+      "result_button_count": 1,
+      "state": "transcribing"
+    },
+    {
+      "path": ".cache/app-memory-study/ui-20260916/11-second-complete.json",
+      "sha256": "50767d3aa6953bba9c478472d1908a0be8b34d2a3b9629d91c0d67521a857d4f",
+      "epoch_ms": 1789542034689,
+      "result_button_count": 2,
+      "state": "ready"
+    },
+    {
+      "path": ".cache/app-memory-study/ui-20260916/12-third-start.json",
+      "sha256": "680b4027f06b62ce5c7d24d26d06242a60c229c031bc60e118bd722a82553393",
+      "epoch_ms": 1789542040152,
+      "result_button_count": 2,
+      "state": "recording"
+    },
+    {
+      "path": ".cache/app-memory-study/ui-20260916/13-third-processing.json",
+      "sha256": "53d3fab24f61269defdee52fc1614f1d9ee7b7b06b185e64a58acf982a109c24",
+      "epoch_ms": 1789542045495,
+      "result_button_count": 2,
+      "state": "transcribing"
+    },
+    {
+      "path": ".cache/app-memory-study/ui-20260916/14-third-complete.json",
+      "sha256": "e335a290806414a4b0ded7d23f1ebc81218627b5f2736805234d700329b0c725",
+      "epoch_ms": 1789542101615,
+      "result_button_count": 3,
+      "state": "ready"
+    },
+    {
+      "path": ".cache/app-memory-study/ui-20260916/15-cancel-case-start.json",
+      "sha256": "bed10851460432afff91247381dc8d0f33701b3eb126d6132805cb4f2a68fe9d",
+      "epoch_ms": 1789542108053,
+      "result_button_count": 3,
+      "state": "recording"
+    },
+    {
+      "path": ".cache/app-memory-study/ui-20260916/16-cancel-case-processing.json",
+      "sha256": "c25f2cf17fdb024d80a655e349737fca8ab8f631f5ec791bcd3c71928f274b0f",
+      "epoch_ms": 1789542114321,
+      "result_button_count": 3,
+      "state": "transcribing"
+    },
+    {
+      "path": ".cache/app-memory-study/ui-20260916/17-cancel-clicked.json",
+      "sha256": "48442fdab939f33d1c7273e32532614ea9f2cc908d975be81ad7c016f51b5791",
+      "epoch_ms": 1789542134169,
+      "result_button_count": 3,
+      "state": "cancelling"
+    },
+    {
+      "path": ".cache/app-memory-study/ui-20260916/18-cancel-recovered.json",
+      "sha256": "bdc7529be405135dcc1da294444adcbe3b8584c7789936e1c86f1105201044aa",
+      "epoch_ms": 1789542146367,
+      "result_button_count": 3,
+      "state": "ready"
+    },
+    {
+      "path": ".cache/app-memory-study/ui-20260916/19-after-cancel-start.json",
+      "sha256": "be9b0f0b1d109cb965d09473bb45445a44d41e90e9a092d73d14a09b65e5b737",
+      "epoch_ms": 1789542159921,
+      "result_button_count": 3,
+      "state": "recording"
+    },
+    {
+      "path": ".cache/app-memory-study/ui-20260916/20-after-cancel-processing.json",
+      "sha256": "c4a38d45cc50884e51a85c09e576d990bec25562ee4734922618630bcc92043b",
+      "epoch_ms": 1789542173868,
+      "result_button_count": 3,
+      "state": "transcribing"
+    },
+    {
+      "path": ".cache/app-memory-study/ui-20260916/21-after-cancel-complete.json",
+      "sha256": "c2ba6efef0150dcee867a50c3e2342eb1d407d4ac9bec66ffd406de826c60a59",
+      "epoch_ms": 1789542223119,
+      "result_button_count": 4,
+      "state": "ready"
+    },
+    {
+      "path": ".cache/app-memory-study/ui-20260916/22-reopened-with-localized-close.json",
+      "sha256": "57f05167a8fbddb6f0e76012e025edbab7dc6aa513f0ef93c6e4c26aadb33391",
+      "epoch_ms": 1789542376447,
+      "result_button_count": 0,
+      "state": "other"
+    },
+    {
+      "path": ".cache/app-memory-study/ui-20260916/23-localized-close-verified.json",
+      "sha256": "4b10849b399d9dcd3f5f2954498d0a29fd5d75a6cc9022bc5491cd1ce2a2786a",
+      "epoch_ms": 1789542383662,
+      "result_button_count": 0,
+      "state": "other"
+    },
+    {
+      "path": ".cache/app-memory-study/ui-20260916/24-localized-close-focus-returned.json",
+      "sha256": "81d18c0b38757e01654a5ede6e945c7fc740618c11728c8f1a65e8b9b38503c0",
+      "epoch_ms": 1789542390533,
+      "result_button_count": 0,
+      "state": "ready"
+    }
+  ],
+  "final_app_status": [
+    {
+      "displayName": "SpeakMore Model Check",
+      "id": "com.speakmore.modelcheck.20260916",
+      "isRunning": false,
+      "lastUsedDate": 811209600,
+      "useCount": 1
+    }
+  ],
+  "builds": {
+    "SpeakMore": {
+      "sha256": "186cafa6e3cd049850b55a1f6ec675831a2576cc6d68b88c03ab22ec7e5707fd",
+      "identifier": "com.speakmore.desktop",
+      "minimum_system": "14.0",
+      "file": "target/release/bundle/macos/SpeakMore.app/Contents/MacOS/speakmore-desktop: Mach-O 64-bit executable arm64",
+      "private_key_file_count": 0,
+      "test_marker_matches": 0
+    },
+    "SpeakMore Model Check": {
+      "sha256": "b73dcb8ecf549c549bb36a32037dfe720d10d7939515097e316c0e2348e39558",
+      "identifier": "com.speakmore.modelcheck.20260916",
+      "minimum_system": "14.0",
+      "file": "target/release/bundle/macos/SpeakMore Model Check.app/Contents/MacOS/speakmore-desktop: Mach-O 64-bit executable arm64",
+      "private_key_file_count": 0
+    },
+    "SpeakMore Input Check": {
+      "sha256": "d6ada176f445a923f8e43550991be5248c8139e957f25b3364f660a6e3c03f26",
+      "identifier": "com.speakmore.inputcheck.20260916",
+      "minimum_system": "14.0",
+      "file": "target/release/bundle/macos/SpeakMore Input Check.app/Contents/MacOS/speakmore-desktop: Mach-O 64-bit executable arm64",
+      "private_key_file_count": 0
+    }
+  },
+  "validation": {
+    "frontend_tests": 46,
+    "public_audio_tests": 2,
+    "model_check_tests": 2,
+    "typescript_vite": "passed",
+    "all_targets_clippy_features": "session-fixtures,target-audit,model-audio-check; -D warnings passed",
+    "normal_and_check_codesign": "deep/strict valid; ad-hoc only, not notarized",
+    "production_catalog_equals_baseline": true,
+    "test_markers_absent_normal_binary_and_frontend": true
+  },
+  "limitations": [
+    "same-host M4 only; no M1 8GB or macOS14 qualification",
+    "not physical capture, resampling, TCC or wall-clock 300 seconds",
+    "388.312 seconds of sampling, not 30 minutes",
+    "current process sum sampled, not atomic or guaranteed instantaneous maximum",
+    "RSS may double-count shared pages; shared WindowServer not attributed",
+    "long AX fields truncated to 512 bytes; no whole-text hash comparison in this GUI run",
+    "measurement build predates localized close label; final build separately identified",
+    "no natural speech accuracy, controlled latency benchmark or commercial gate"
+  ],
+  "sources": {
+    "src-tauri/src/session_runtime/public_audio.rs": "ea01c262a2bfceedad1defce8717a6badb08f407515f87e69427b0e07591956d",
+    "src-tauri/src/session_runtime/mod.rs": "b8a72f006b4028f008e803f6afac0e49320d1f56085a3f7e606ce7b937b22973",
+    "src-tauri/src/lib.rs": "fa0d01ae1107840b0d200041d81c60bd9dcbd577ad226187d1b7b41c2fcfc7d2",
+    "src-tauri/src/model_check.rs": "f9d672d9b857bd2c7928952e63d5e2c1502f85460ed59eeed96f839544d66a56",
+    "src-tauri/Cargo.toml": "ab966f564d9113089ff9f7c1f107ccb095ae1076acb758f60463ba887cc36037",
+    "src-tauri/tauri.model-audio-check.conf.json": "1953f5fd9c0c446994b573a0d310af7005980f6f33bc126bf9a0b6c49fb62fea",
+    "scripts/build-model-check.mjs": "f803bdc2dc4275f668a1bc1b1ab2592488d27127d653c6e92bfd6df79dfc8ca5",
+    "scripts/build-desktop.mjs": "bf1d46bc91282b261889a59517470cd6b5521063bd1953903a6c3e192d37973e",
+    "scripts/build-target-audit.mjs": "f4aec2ca6fdfdf45b274fd505e2a30d97a3fd6cf6b34c1f28286dbe54dbae516",
+    "scripts/diagnostics/macos-app-memory.c": "a9f4087116dbed8cd4b35d97550a7b1d32663bfb100423a51059a9473dd16258",
+    "scripts/diagnostics/macos-app-memory.py": "0a03767635e699d9632bbd3f3fd85b60bed1b688ea56c2b3522be45a57221e08",
+    "src/App.tsx": "edd37740e0ed82770721995ff2d62a1f19042bde0b03cf74ef31a932a092e1cb",
+    "src/components/ui/sheet.tsx": "8ce82c05b42432f29bc3baa4e6324cd493315d1df3eb02d421519144e451c11e",
+    "src/features/results.tsx": "f35740b2ab4e0479285dc1859ccc1efb9d7e60be2e1e05fe234c53fdbce26f4c",
+    "docs/screenshots/macos-public-audio-processing.jpg": "4a8caea5c1fe94da600367cf12fee7d696c65ff65bc22267e2fd43716f18ccfc",
+    "docs/screenshots/macos-public-audio-completed.jpg": "a47e2f72fbd04fe03f7bfafa8787137bbf1082b0651b1afa3062e2e43fe38125",
+    "docs/screenshots/macos-results-close-localized.jpg": "6d762f61b9110d7c1a008eac78896b0dec65978c12eafa64cb2534d299367e87",
+    "docs/evidence/macos-gui-resources-2026-09-16.samples.jsonl.gz": "ee3ce31ea6261c8b3f1fa58d1e5eaf49837ca4b0549ce0b4bb7e345c4755eb3f",
+    "docs/evidence/macos-gui-resources-2026-09-16.ui.jsonl.gz": "24bf40623ea6f64a3ae7c05cbba1b34777e171afd795b82b20e8cbdfebe50b92"
+  }
+}

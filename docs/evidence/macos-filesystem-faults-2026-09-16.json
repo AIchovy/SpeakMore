@@ -1,0 +1,76 @@
+{
+  "date": "2026-09-16",
+  "synthetic_only": true,
+  "app_implementation": "real ModelManager / SqliteModels / Store, cfg(test) child only",
+  "frozen_test_binary_sha256": "94e189e931850ed2e99025e6fecea8f425ddc084870d7073efebe46dc70fa089",
+  "raw_sha256": "062b3f19f352c4c84e8311b1cf01e8b296880990163031481f91785bc8a5d8ce",
+  "raw_gzip_sha256": "18cdc4933b2f76bfddee75fefb7ee5f33ace8646dd3bfc548821d4b5d78ffa73",
+  "raw_file": "macos-filesystem-faults-2026-09-16.raw.json.gz",
+  "cases": [
+    {
+      "phase": "copying",
+      "passed": true,
+      "interrupted_exit_code": -9,
+      "actual_enospc": null,
+      "retry_passed": true
+    },
+    {
+      "phase": "before-rename",
+      "passed": true,
+      "interrupted_exit_code": -9,
+      "actual_enospc": null,
+      "retry_passed": true
+    },
+    {
+      "phase": "before-registration",
+      "passed": true,
+      "interrupted_exit_code": -9,
+      "actual_enospc": null,
+      "retry_passed": false
+    },
+    {
+      "phase": "after-registration",
+      "passed": true,
+      "interrupted_exit_code": -9,
+      "actual_enospc": null,
+      "retry_passed": false
+    },
+    {
+      "phase": "enospc-copying",
+      "passed": true,
+      "interrupted_exit_code": 0,
+      "actual_enospc": {
+        "bytes_written": 387973120,
+        "errno": 28,
+        "capacity_bytes": 536829952,
+        "device": 16777239
+      },
+      "retry_passed": true
+    }
+  ],
+  "protected_data": [
+    "old model files and active selection",
+    "import source files",
+    "history",
+    "dictionary",
+    "settings",
+    "usage",
+    "unknown staging sentinel"
+  ],
+  "limits": [
+    "No physical power loss or drive failure",
+    "Synthetic model bytes; no ASR quality claim",
+    "No user database, microphone, cloud or native UI accessed",
+    "Not an interruption inside SQLite migration or registration transaction"
+  ],
+  "volume_detached": true,
+  "sources": {
+    "scripts/diagnostics/macos-filesystem-faults.py": "a9b7f54df1ac1723fc78d309ca9d917beea3c0b3be45594c5a28fa3bef50fb98",
+    "src-tauri/src/model_registry/fault_tests.rs": "81d5283c36fa5adea7a6aa75087f086ac4e7feb1bfe69fbfa7bd28a83ab150a6",
+    "src-tauri/src/model_registry.rs": "7d67febda9637e38e358280eb6a1fb05c8445fcde4270e4ce32d7cb31feede2e",
+    "crates/models/src/manager.rs": "35920b25b535d109d53fb6a8fda967d3744ba63814b3cac0e443b530c4483125",
+    "crates/core/src/storage.rs": "34dd417129fe3fb912d16d831839c7993e6311a23a881f58009b4111a1c207f8",
+    "crates/core/src/storage/startup.rs": "5180f9e4cd8e655b54754124de1ee3e5975aae37db57f4d0c471eee56e96d050",
+    "Cargo.lock": "54347c7a78b3f4a724f6fbcf139117945f1ee647ea16a9e11ccf535662e77b69"
+  }
+}

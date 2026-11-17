@@ -1,0 +1,699 @@
+{
+  "schema": 1,
+  "date": "2026-09-16",
+  "scope": "Standalone native public-fixture experiment; no microphone, VAD execution, main app or WebKit. Not a whole-app memory gate.",
+  "host_record": "Same development Mac previously recorded as Apple M4 / 32 GB / macOS 15.6.1. OS/machine also captured in every report.",
+  "all_experiments_sequential": true,
+  "total_decodes": 16,
+  "product_configuration_changed": false,
+  "source_note": "Modes were added during investigation. Earlier report fields are preserved verbatim; final runner was verified with the last node_stats run.",
+  "input_locks": {
+    "resources/sensevoice-native.lock.json": "7ee55e67ec960aa4b91b80fd8720e7ccae2cb0d11ce6a60325de22d7d2bf3786",
+    "resources/sensevoice-fixtures.lock.json": "325c662f6bb0e6a6af35dfba02eb95b8724cd51827ef7050edaaa40e01fd1242",
+    "resources/model-catalog.payload.json": "30a8e6d4b56d69bbc6204004c1a2d008a927a80055c08762a2883a215d87fb1a"
+  },
+  "final_diagnostic_sources": {
+    "scripts/diagnostics/sensevoice-memory.cc": "e33056b8bf22b710d9a60ec469f9f50d97b2ed77b17d906aa0dcedc1efb606a2",
+    "scripts/diagnostics/sensevoice-memory.py": "c855b35de2b102b629fa99486f8f55f837352551bb56d822f8af9ce2f1a2c7d5"
+  },
+  "reports": [
+    {
+      "source_run": "run-ve_mgxsk",
+      "report_sha256": "d952e030de748e941b77411a8cdcf4d800aec7334222862022c1dcf98f3abf79",
+      "observed_exit_code": 0,
+      "report": {
+        "os": "macOS-15.6.1-arm64-arm-64bit",
+        "machine": "arm64",
+        "threads": 4,
+        "duration_samples": 4800000,
+        "audio_sha256": "eb1eb008904465b74c304aad8342e8c7d3c6e61ffe9f66adcaca9cf0f76a93f4",
+        "sherpa": "1.13.8",
+        "ort": "1.28.2",
+        "repeats": 1,
+        "cases": [
+          {
+            "mode": "default",
+            "measurements": [
+              {
+                "stage": "loaded",
+                "elapsed_ms": 622,
+                "rss_bytes": 513130496,
+                "max_rss_bytes": 513130496,
+                "footprint_bytes": 270795688,
+                "peak_footprint_bytes": 319111984
+              },
+              {
+                "stage": "decoded",
+                "elapsed_ms": 29686,
+                "rss_bytes": 1755004928,
+                "max_rss_bytes": 1897431040,
+                "footprint_bytes": 1846937544,
+                "peak_footprint_bytes": 1847019464
+              },
+              {
+                "stage": "released",
+                "elapsed_ms": 30417,
+                "rss_bytes": 1759133696,
+                "max_rss_bytes": 1897431040,
+                "footprint_bytes": 1843906504,
+                "peak_footprint_bytes": 1847019464
+              },
+              {
+                "stage": "unloaded",
+                "elapsed_ms": 30467,
+                "rss_bytes": 446644224,
+                "max_rss_bytes": 1897431040,
+                "footprint_bytes": 86688800,
+                "peak_footprint_bytes": 1847019464
+              }
+            ],
+            "transcripts": [
+              {
+                "sha256": "67658f46ee7ca478852d1770349001892c8665696429fd7931b64698940657cb",
+                "bytes": 2570,
+                "phrase_count": 37
+              }
+            ]
+          },
+          {
+            "mode": "no_arena",
+            "measurements": [
+              {
+                "stage": "loaded",
+                "elapsed_ms": 632,
+                "rss_bytes": 592019456,
+                "max_rss_bytes": 592019456,
+                "footprint_bytes": 238699456,
+                "peak_footprint_bytes": 331580328
+              },
+              {
+                "stage": "decoded",
+                "elapsed_ms": 39604,
+                "rss_bytes": 2492399616,
+                "max_rss_bytes": 2492399616,
+                "footprint_bytes": 247122152,
+                "peak_footprint_bytes": 1468958544
+              },
+              {
+                "stage": "released",
+                "elapsed_ms": 40341,
+                "rss_bytes": 2490728448,
+                "max_rss_bytes": 2492399616,
+                "footprint_bytes": 245450984,
+                "peak_footprint_bytes": 1468958544
+              },
+              {
+                "stage": "unloaded",
+                "elapsed_ms": 40372,
+                "rss_bytes": 2471559168,
+                "max_rss_bytes": 2492399616,
+                "footprint_bytes": 88017128,
+                "peak_footprint_bytes": 1468958544
+              }
+            ],
+            "transcripts": [
+              {
+                "sha256": "67658f46ee7ca478852d1770349001892c8665696429fd7931b64698940657cb",
+                "bytes": 2570,
+                "phrase_count": 37
+              }
+            ]
+          },
+          {
+            "mode": "no_arena_or_pattern",
+            "measurements": [
+              {
+                "stage": "loaded",
+                "elapsed_ms": 605,
+                "rss_bytes": 541671424,
+                "max_rss_bytes": 541671424,
+                "footprint_bytes": 237470584,
+                "peak_footprint_bytes": 324895512
+              },
+              {
+                "stage": "decoded",
+                "elapsed_ms": 39371,
+                "rss_bytes": 2428764160,
+                "max_rss_bytes": 2442035200,
+                "footprint_bytes": 244467896,
+                "peak_footprint_bytes": 1470531336
+              },
+              {
+                "stage": "released",
+                "elapsed_ms": 40083,
+                "rss_bytes": 2426978304,
+                "max_rss_bytes": 2442035200,
+                "footprint_bytes": 242895032,
+                "peak_footprint_bytes": 1470531336
+              },
+              {
+                "stage": "unloaded",
+                "elapsed_ms": 40113,
+                "rss_bytes": 2406907904,
+                "max_rss_bytes": 2442035200,
+                "footprint_bytes": 85477560,
+                "peak_footprint_bytes": 1470531336
+              }
+            ],
+            "transcripts": [
+              {
+                "sha256": "67658f46ee7ca478852d1770349001892c8665696429fd7931b64698940657cb",
+                "bytes": 2570,
+                "phrase_count": 37
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "source_run": "run-l620_5z2",
+      "report_sha256": "32930d44f135bef1fbe6d93f87d937d8c401a7d620de6a7baf050d3258803648",
+      "observed_exit_code": 0,
+      "report": {
+        "os": "macOS-15.6.1-arm64-arm-64bit",
+        "machine": "arm64",
+        "threads": 4,
+        "duration_samples": 4800000,
+        "audio_sha256": "eb1eb008904465b74c304aad8342e8c7d3c6e61ffe9f66adcaca9cf0f76a93f4",
+        "sherpa": "1.13.8",
+        "ort": "1.28.2",
+        "repeats": 3,
+        "cases": [
+          {
+            "mode": "default",
+            "measurements": [
+              {
+                "stage": "loaded",
+                "elapsed_ms": 675,
+                "rss_bytes": 540196864,
+                "max_rss_bytes": 540196864,
+                "footprint_bytes": 274203536,
+                "peak_footprint_bytes": 324780848
+              },
+              {
+                "stage": "decoded",
+                "elapsed_ms": 33811,
+                "rss_bytes": 1821835264,
+                "max_rss_bytes": 1821835264,
+                "footprint_bytes": 1843693512,
+                "peak_footprint_bytes": 1843693512
+              },
+              {
+                "stage": "released",
+                "elapsed_ms": 34596,
+                "rss_bytes": 1822310400,
+                "max_rss_bytes": 1823309824,
+                "footprint_bytes": 1840826312,
+                "peak_footprint_bytes": 1843693512
+              },
+              {
+                "stage": "decoded",
+                "elapsed_ms": 32333,
+                "rss_bytes": 1566720000,
+                "max_rss_bytes": 2345910272,
+                "footprint_bytes": 2327611720,
+                "peak_footprint_bytes": 2327611720
+              },
+              {
+                "stage": "released",
+                "elapsed_ms": 67032,
+                "rss_bytes": 1573650432,
+                "max_rss_bytes": 2345910272,
+                "footprint_bytes": 2323466568,
+                "peak_footprint_bytes": 2327611720
+              },
+              {
+                "stage": "decoded",
+                "elapsed_ms": 32635,
+                "rss_bytes": 1721171968,
+                "max_rss_bytes": 2345910272,
+                "footprint_bytes": 2324891976,
+                "peak_footprint_bytes": 2363050312
+              },
+              {
+                "stage": "released",
+                "elapsed_ms": 99781,
+                "rss_bytes": 1721810944,
+                "max_rss_bytes": 2345910272,
+                "footprint_bytes": 2323777864,
+                "peak_footprint_bytes": 2363050312
+              },
+              {
+                "stage": "unloaded",
+                "elapsed_ms": 99854,
+                "rss_bytes": 330383360,
+                "max_rss_bytes": 2345910272,
+                "footprint_bytes": 86131720,
+                "peak_footprint_bytes": 2363050312
+              }
+            ],
+            "transcripts": [
+              {
+                "sha256": "67658f46ee7ca478852d1770349001892c8665696429fd7931b64698940657cb",
+                "bytes": 2570,
+                "phrase_count": 37
+              },
+              {
+                "sha256": "67658f46ee7ca478852d1770349001892c8665696429fd7931b64698940657cb",
+                "bytes": 2570,
+                "phrase_count": 37
+              },
+              {
+                "sha256": "67658f46ee7ca478852d1770349001892c8665696429fd7931b64698940657cb",
+                "bytes": 2570,
+                "phrase_count": 37
+              }
+            ]
+          },
+          {
+            "mode": "no_pattern",
+            "measurements": [
+              {
+                "stage": "loaded",
+                "elapsed_ms": 598,
+                "rss_bytes": 539049984,
+                "max_rss_bytes": 539049984,
+                "footprint_bytes": 286081864,
+                "peak_footprint_bytes": 320717472
+              },
+              {
+                "stage": "decoded",
+                "elapsed_ms": 29835,
+                "rss_bytes": 2023948288,
+                "max_rss_bytes": 2023948288,
+                "footprint_bytes": 1732642712,
+                "peak_footprint_bytes": 1732642712
+              },
+              {
+                "stage": "released",
+                "elapsed_ms": 30556,
+                "rss_bytes": 2022555648,
+                "max_rss_bytes": 2023964672,
+                "footprint_bytes": 1732216728,
+                "peak_footprint_bytes": 1732659096
+              },
+              {
+                "stage": "decoded",
+                "elapsed_ms": 32356,
+                "rss_bytes": 1509900288,
+                "max_rss_bytes": 2062286848,
+                "footprint_bytes": 1835386824,
+                "peak_footprint_bytes": 1836173256
+              },
+              {
+                "stage": "released",
+                "elapsed_ms": 63037,
+                "rss_bytes": 1522597888,
+                "max_rss_bytes": 2062286848,
+                "footprint_bytes": 1832781768,
+                "peak_footprint_bytes": 1836173256
+              },
+              {
+                "stage": "decoded",
+                "elapsed_ms": 34907,
+                "rss_bytes": 1724284928,
+                "max_rss_bytes": 2062286848,
+                "footprint_bytes": 1834469320,
+                "peak_footprint_bytes": 1872824264
+              },
+              {
+                "stage": "released",
+                "elapsed_ms": 98062,
+                "rss_bytes": 1725464576,
+                "max_rss_bytes": 2062286848,
+                "footprint_bytes": 1833797576,
+                "peak_footprint_bytes": 1872824264
+              },
+              {
+                "stage": "unloaded",
+                "elapsed_ms": 98116,
+                "rss_bytes": 418168832,
+                "max_rss_bytes": 2062286848,
+                "footprint_bytes": 82314272,
+                "peak_footprint_bytes": 1872824264
+              }
+            ],
+            "transcripts": [
+              {
+                "sha256": "67658f46ee7ca478852d1770349001892c8665696429fd7931b64698940657cb",
+                "bytes": 2570,
+                "phrase_count": 37
+              },
+              {
+                "sha256": "67658f46ee7ca478852d1770349001892c8665696429fd7931b64698940657cb",
+                "bytes": 2570,
+                "phrase_count": 37
+              },
+              {
+                "sha256": "67658f46ee7ca478852d1770349001892c8665696429fd7931b64698940657cb",
+                "bytes": 2570,
+                "phrase_count": 37
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "source_run": "run-0v88z5ie",
+      "report_sha256": "7b3da6b80312e3416bad2de3403f32ea8827b9b84aad5921b4e91ba2d00302ca",
+      "observed_exit_code": 0,
+      "report": {
+        "os": "macOS-15.6.1-arm64-arm-64bit",
+        "machine": "arm64",
+        "threads": 4,
+        "duration_samples": 4800000,
+        "audio_sha256": "eb1eb008904465b74c304aad8342e8c7d3c6e61ffe9f66adcaca9cf0f76a93f4",
+        "sherpa": "1.13.8",
+        "ort": "1.28.2",
+        "repeats": 3,
+        "cases": [
+          {
+            "mode": "exact_arena",
+            "measurements": [
+              {
+                "stage": "loaded",
+                "elapsed_ms": 592,
+                "rss_bytes": 579518464,
+                "max_rss_bytes": 579518464,
+                "footprint_bytes": 289637312,
+                "peak_footprint_bytes": 366150520
+              },
+              {
+                "stage": "decoded",
+                "elapsed_ms": 32899,
+                "rss_bytes": 2469003264,
+                "max_rss_bytes": 2469003264,
+                "footprint_bytes": 2607811032,
+                "peak_footprint_bytes": 2607811032
+              },
+              {
+                "stage": "released",
+                "elapsed_ms": 33652,
+                "rss_bytes": 2478358528,
+                "max_rss_bytes": 2478538752,
+                "footprint_bytes": 2605713880,
+                "peak_footprint_bytes": 2607827416
+              },
+              {
+                "stage": "decoded",
+                "elapsed_ms": 30561,
+                "rss_bytes": 2202550272,
+                "max_rss_bytes": 2561622016,
+                "footprint_bytes": 2628012504,
+                "peak_footprint_bytes": 2647181784
+              },
+              {
+                "stage": "released",
+                "elapsed_ms": 64338,
+                "rss_bytes": 2202992640,
+                "max_rss_bytes": 2561622016,
+                "footprint_bytes": 2624408024,
+                "peak_footprint_bytes": 2647181784
+              },
+              {
+                "stage": "decoded",
+                "elapsed_ms": 30256,
+                "rss_bytes": 2545680384,
+                "max_rss_bytes": 2561622016,
+                "footprint_bytes": 2626996696,
+                "peak_footprint_bytes": 2647181784
+              },
+              {
+                "stage": "released",
+                "elapsed_ms": 94706,
+                "rss_bytes": 2542714880,
+                "max_rss_bytes": 2561622016,
+                "footprint_bytes": 2624670168,
+                "peak_footprint_bytes": 2647181784
+              },
+              {
+                "stage": "unloaded",
+                "elapsed_ms": 94766,
+                "rss_bytes": 2536407040,
+                "max_rss_bytes": 2561622016,
+                "footprint_bytes": 92375512,
+                "peak_footprint_bytes": 2647181784
+              }
+            ],
+            "transcripts": [
+              {
+                "sha256": "67658f46ee7ca478852d1770349001892c8665696429fd7931b64698940657cb",
+                "bytes": 2570,
+                "phrase_count": 37
+              },
+              {
+                "sha256": "67658f46ee7ca478852d1770349001892c8665696429fd7931b64698940657cb",
+                "bytes": 2570,
+                "phrase_count": 37
+              },
+              {
+                "sha256": "67658f46ee7ca478852d1770349001892c8665696429fd7931b64698940657cb",
+                "bytes": 2570,
+                "phrase_count": 37
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "source_run": "run-m_hopvo_",
+      "report_sha256": "52e504bf8d09df6c14c24f8691ee4d655f517d9b6535c7773e30d64aaaef17db",
+      "observed_exit_code": 0,
+      "report": {
+        "os": "macOS-15.6.1-arm64-arm-64bit",
+        "machine": "arm64",
+        "threads": 4,
+        "duration_samples": 4800000,
+        "audio_sha256": "eb1eb008904465b74c304aad8342e8c7d3c6e61ffe9f66adcaca9cf0f76a93f4",
+        "sherpa": "1.13.8",
+        "ort": "1.28.2",
+        "repeats": 1,
+        "cases": [
+          {
+            "mode": "node_stats",
+            "measurements": [
+              {
+                "stage": "loaded",
+                "elapsed_ms": 577,
+                "rss_bytes": 531988480,
+                "max_rss_bytes": 531988480,
+                "footprint_bytes": 213648248,
+                "peak_footprint_bytes": 322732848
+              },
+              {
+                "stage": "decoded",
+                "elapsed_ms": 31181,
+                "rss_bytes": 1614446592,
+                "max_rss_bytes": 1916026880,
+                "footprint_bytes": 1823999872,
+                "peak_footprint_bytes": 1823999872
+              },
+              {
+                "stage": "released",
+                "elapsed_ms": 31870,
+                "rss_bytes": 1621131264,
+                "max_rss_bytes": 1916026880,
+                "footprint_bytes": 1823016832,
+                "peak_footprint_bytes": 1824016256
+              },
+              {
+                "stage": "unloaded",
+                "elapsed_ms": 31922,
+                "rss_bytes": 311459840,
+                "max_rss_bytes": 1916026880,
+                "footprint_bytes": 77349848,
+                "peak_footprint_bytes": 1824016256
+              }
+            ],
+            "transcripts": [
+              {
+                "sha256": "67658f46ee7ca478852d1770349001892c8665696429fd7931b64698940657cb",
+                "bytes": 2570,
+                "phrase_count": 37
+              }
+            ]
+          },
+          {
+            "mode": "compact_arena",
+            "measurements": [
+              {
+                "stage": "loaded",
+                "elapsed_ms": 692,
+                "rss_bytes": 473251840,
+                "max_rss_bytes": 473251840,
+                "footprint_bytes": 206750584,
+                "peak_footprint_bytes": 327320320
+              },
+              {
+                "stage": "decoded",
+                "elapsed_ms": 31338,
+                "rss_bytes": 2127544320,
+                "max_rss_bytes": 2220408832,
+                "footprint_bytes": 2613709224,
+                "peak_footprint_bytes": 2613709224
+              },
+              {
+                "stage": "released",
+                "elapsed_ms": 32135,
+                "rss_bytes": 2134376448,
+                "max_rss_bytes": 2220408832,
+                "footprint_bytes": 2608056744,
+                "peak_footprint_bytes": 2613709224
+              },
+              {
+                "stage": "unloaded",
+                "elapsed_ms": 32243,
+                "rss_bytes": 2134048768,
+                "max_rss_bytes": 2220408832,
+                "footprint_bytes": 90392952,
+                "peak_footprint_bytes": 2613709224
+              }
+            ],
+            "transcripts": [
+              {
+                "sha256": "67658f46ee7ca478852d1770349001892c8665696429fd7931b64698940657cb",
+                "bytes": 2570,
+                "phrase_count": 37
+              }
+            ]
+          },
+          {
+            "mode": "growth_arena",
+            "measurements": [
+              {
+                "stage": "loaded",
+                "elapsed_ms": 659,
+                "rss_bytes": 585695232,
+                "max_rss_bytes": 585695232,
+                "footprint_bytes": 224805800,
+                "peak_footprint_bytes": 325534464
+              },
+              {
+                "stage": "decoded",
+                "elapsed_ms": 35022,
+                "rss_bytes": 1597341696,
+                "max_rss_bytes": 1943945216,
+                "footprint_bytes": 1803749272,
+                "peak_footprint_bytes": 1803749272
+              },
+              {
+                "stage": "released",
+                "elapsed_ms": 35785,
+                "rss_bytes": 1606565888,
+                "max_rss_bytes": 1943945216,
+                "footprint_bytes": 1798965144,
+                "peak_footprint_bytes": 1803749272
+              },
+              {
+                "stage": "unloaded",
+                "elapsed_ms": 35838,
+                "rss_bytes": 303448064,
+                "max_rss_bytes": 1943945216,
+                "footprint_bytes": 84837288,
+                "peak_footprint_bytes": 1803749272
+              }
+            ],
+            "transcripts": [
+              {
+                "sha256": "67658f46ee7ca478852d1770349001892c8665696429fd7931b64698940657cb",
+                "bytes": 2570,
+                "phrase_count": 37
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "source_run": "run-oh5gmubm",
+      "report_sha256": "d65a10f8736d16adf8f1dea775df00345535b421337bc1aa434dfa4767194401",
+      "observed_exit_code": 0,
+      "report": {
+        "schema": 1,
+        "completed": true,
+        "os": "macOS-15.6.1-arm64-arm-64bit",
+        "machine": "arm64",
+        "threads": 4,
+        "duration_samples": 4800000,
+        "audio_sha256": "eb1eb008904465b74c304aad8342e8c7d3c6e61ffe9f66adcaca9cf0f76a93f4",
+        "sherpa": "1.13.8",
+        "ort": "1.28.2",
+        "repeats": 1,
+        "cases": [
+          {
+            "mode": "node_stats",
+            "options": "EnableMemPattern=0\n",
+            "measurements": [
+              {
+                "stage": "loaded",
+                "elapsed_ms": 639,
+                "rss_bytes": 489750528,
+                "max_rss_bytes": 489750528,
+                "footprint_bytes": 244876152,
+                "peak_footprint_bytes": 317440744
+              },
+              {
+                "stage": "decoded",
+                "elapsed_ms": 32577,
+                "rss_bytes": 1821605888,
+                "max_rss_bytes": 1870938112,
+                "footprint_bytes": 1849214872,
+                "peak_footprint_bytes": 1849214872
+              },
+              {
+                "stage": "released",
+                "elapsed_ms": 33332,
+                "rss_bytes": 1821671424,
+                "max_rss_bytes": 1870938112,
+                "footprint_bytes": 1846773656,
+                "peak_footprint_bytes": 1849214872
+              },
+              {
+                "stage": "unloaded",
+                "elapsed_ms": 33384,
+                "rss_bytes": 506642432,
+                "max_rss_bytes": 1870938112,
+                "footprint_bytes": 90883056,
+                "peak_footprint_bytes": 1849214872
+              }
+            ],
+            "transcripts": [
+              {
+                "sha256": "67658f46ee7ca478852d1770349001892c8665696429fd7931b64698940657cb",
+                "bytes": 2570,
+                "phrase_count": 37
+              }
+            ],
+            "node_stats": {
+              "count": 3412,
+              "max_dynamic_bytes": 501500928,
+              "max_temporary_bytes": 400660272,
+              "csv_sha256": "4569a29a66414e3098d19edf1f7bcbca6a8bf0ab6b02fe08b7845d63eaff9cb2"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "node_stats": [
+    {
+      "source_run": "run-m_hopvo_",
+      "file": "sensevoice-memory-2026-09-16-run-m_hopvo_.csv",
+      "sha256": "6209a7d54327c12e6dc6385a2f5174803c83cd2c2d54617a79839e7d4ff02c58",
+      "nodes": 3412,
+      "max_dynamic_bytes": 501500928,
+      "max_temporary_bytes": 400660272
+    },
+    {
+      "source_run": "run-oh5gmubm",
+      "file": "sensevoice-memory-2026-09-16-run-oh5gmubm.csv",
+      "sha256": "4569a29a66414e3098d19edf1f7bcbca6a8bf0ab6b02fe08b7845d63eaff9cb2",
+      "nodes": 3412,
+      "max_dynamic_bytes": 501500928,
+      "max_temporary_bytes": 400660272
+    }
+  ]
+}

@@ -1,0 +1,577 @@
+{
+  "date": "2026-09-16",
+  "purpose": "public_development_diagnostic",
+  "release_gate_passed": false,
+  "report": {
+    "schema": 1,
+    "scorer": "speakmore-strict-text-v1",
+    "scorer_sha256": "6ad9c589f105f6f08ac2abf5909b240795825ebeb4ba98b6bf101ccd1144d526",
+    "manifest_sha256": "75bfcce747023da758a8850cc5aea640982240d75b1415020b3f96bc857fce48",
+    "results_sha256": "2463b7ee4fa966cd78d3a430da452835f3febe541c4ac9a37f1123b49b83b296",
+    "purpose": "public_development_diagnostic",
+    "release_gate_passed": false,
+    "limits": [
+      "Public development splits; not an independent acceptance set",
+      "No recorded consent for a private SpeakMore acceptance corpus",
+      "FLEURS speaker identities unavailable; speaker separation unverified",
+      "No long-duration or negative coverage required by release gate",
+      "Critical fragments not annotated; exact accuracy not measured"
+    ],
+    "critical_fragment_accuracy": null,
+    "negative_automatic_input_tested": false,
+    "header": {
+      "automatic_input": false,
+      "backend": "cpu",
+      "catalog_sha256": "30a8e6d4b56d69bbc6204004c1a2d008a927a80055c08762a2883a215d87fb1a",
+      "clips": 300,
+      "dictionary_terms": [],
+      "language": "auto",
+      "manifest_sha256": "75bfcce747023da758a8850cc5aea640982240d75b1415020b3f96bc857fce48",
+      "models": [
+        "whisper-large-v3-turbo-q5_0"
+      ],
+      "polishing": false,
+      "purpose": "public_development_diagnostic",
+      "runner_sha256": "2fe2ca5688b2c6974f2a7a41da5fc09be79229eca977bc22bdbc22e047464438",
+      "schema": 1,
+      "sensevoice_worker_sha256": "2697f98f7ed8b805c3094ac4e3e8c2ec50794b747530d5a9f87710802d9353d1",
+      "type": "header",
+      "whisper_worker_sha256": "e29a96cf5b747042834079d35dfe024165ceab6fedc0146eaf12ec49e3a5c162"
+    },
+    "summaries": [
+      {
+        "model_id": "whisper-large-v3-turbo-q5_0",
+        "language": "zh",
+        "clips": 100,
+        "metric": "CER",
+        "errors": 314,
+        "substitutions": 118,
+        "deletions": 177,
+        "insertions": 19,
+        "reference_tokens": 3529,
+        "error_rate": 0.08897704732218759,
+        "exact_utterances": 38,
+        "statuses": {
+          "completed": 100
+        },
+        "failures": {},
+        "quality_flags": {},
+        "completed_wall_ms": {
+          "n": 100,
+          "p50": 8000,
+          "p95": 8448,
+          "maximum": 9852,
+          "method": "nearest-rank",
+          "at_least_30_observations": true
+        },
+        "completed_rtf": {
+          "n": 100,
+          "p50": 0.8004115226337448,
+          "p95": 1.5289156626506024,
+          "maximum": 1.9101990049751245,
+          "method": "nearest-rank",
+          "at_least_30_observations": true
+        },
+        "all_attempt_wall_ms": {
+          "n": 100,
+          "p50": 8000,
+          "p95": 8448,
+          "maximum": 9852,
+          "method": "nearest-rank",
+          "at_least_30_observations": true
+        },
+        "duration_buckets": {
+          ">15–45s": {
+            "attempted": 12,
+            "completed_wall_ms": {
+              "n": 12,
+              "p50": 8320,
+              "p95": 8726,
+              "maximum": 8726,
+              "method": "nearest-rank",
+              "at_least_30_observations": false
+            },
+            "completed_rtf": {
+              "n": 12,
+              "p50": 0.4501101321585903,
+              "p95": 0.5407622739018088,
+              "maximum": 0.5407622739018088,
+              "method": "nearest-rank",
+              "at_least_30_observations": false
+            }
+          },
+          ">5–15s": {
+            "attempted": 83,
+            "completed_wall_ms": {
+              "n": 83,
+              "p50": 7981,
+              "p95": 8318,
+              "maximum": 9852,
+              "method": "nearest-rank",
+              "at_least_30_observations": true
+            },
+            "completed_rtf": {
+              "n": 83,
+              "p50": 0.8195652173913044,
+              "p95": 1.4022222222222223,
+              "maximum": 1.531764705882353,
+              "method": "nearest-rank",
+              "at_least_30_observations": true
+            }
+          },
+          "0.25–5s": {
+            "attempted": 5,
+            "completed_wall_ms": {
+              "n": 5,
+              "p50": 7888,
+              "p95": 7956,
+              "maximum": 7956,
+              "method": "nearest-rank",
+              "at_least_30_observations": false
+            },
+            "completed_rtf": {
+              "n": 5,
+              "p50": 1.678481012658228,
+              "p95": 1.9101990049751245,
+              "maximum": 1.9101990049751245,
+              "method": "nearest-rank",
+              "at_least_30_observations": false
+            }
+          }
+        }
+      },
+      {
+        "model_id": "whisper-large-v3-turbo-q5_0",
+        "language": "en",
+        "clips": 100,
+        "metric": "WER",
+        "errors": 165,
+        "substitutions": 106,
+        "deletions": 42,
+        "insertions": 17,
+        "reference_tokens": 2146,
+        "error_rate": 0.07688723205964586,
+        "exact_utterances": 41,
+        "statuses": {
+          "completed": 100
+        },
+        "failures": {},
+        "quality_flags": {},
+        "completed_wall_ms": {
+          "n": 100,
+          "p50": 8489,
+          "p95": 9687,
+          "maximum": 11579,
+          "method": "nearest-rank",
+          "at_least_30_observations": true
+        },
+        "completed_rtf": {
+          "n": 100,
+          "p50": 0.9343607305936074,
+          "p95": 1.62145390070922,
+          "maximum": 2.1651041666666666,
+          "method": "nearest-rank",
+          "at_least_30_observations": true
+        },
+        "all_attempt_wall_ms": {
+          "n": 100,
+          "p50": 8489,
+          "p95": 9687,
+          "maximum": 11579,
+          "method": "nearest-rank",
+          "at_least_30_observations": true
+        },
+        "duration_buckets": {
+          ">5–15s": {
+            "attempted": 87,
+            "completed_wall_ms": {
+              "n": 87,
+              "p50": 8507,
+              "p95": 9684,
+              "maximum": 10386,
+              "method": "nearest-rank",
+              "at_least_30_observations": true
+            },
+            "completed_rtf": {
+              "n": 87,
+              "p50": 0.9544791666666667,
+              "p95": 1.4772875816993465,
+              "maximum": 1.62145390070922,
+              "method": "nearest-rank",
+              "at_least_30_observations": true
+            }
+          },
+          "0.25–5s": {
+            "attempted": 5,
+            "completed_wall_ms": {
+              "n": 5,
+              "p50": 8138,
+              "p95": 8314,
+              "maximum": 8314,
+              "method": "nearest-rank",
+              "at_least_30_observations": false
+            },
+            "completed_rtf": {
+              "n": 5,
+              "p50": 1.928095238095238,
+              "p95": 2.1651041666666666,
+              "maximum": 2.1651041666666666,
+              "method": "nearest-rank",
+              "at_least_30_observations": false
+            }
+          },
+          ">15–45s": {
+            "attempted": 8,
+            "completed_wall_ms": {
+              "n": 8,
+              "p50": 8690,
+              "p95": 11579,
+              "maximum": 11579,
+              "method": "nearest-rank",
+              "at_least_30_observations": false
+            },
+            "completed_rtf": {
+              "n": 8,
+              "p50": 0.5071428571428571,
+              "p95": 0.6073707370737074,
+              "maximum": 0.6073707370737074,
+              "method": "nearest-rank",
+              "at_least_30_observations": false
+            }
+          }
+        }
+      },
+      {
+        "model_id": "whisper-large-v3-turbo-q5_0",
+        "language": "mixed",
+        "clips": 100,
+        "metric": "MER",
+        "errors": 456,
+        "substitutions": 207,
+        "deletions": 234,
+        "insertions": 15,
+        "reference_tokens": 1527,
+        "error_rate": 0.29862475442043224,
+        "exact_utterances": 7,
+        "statuses": {
+          "completed": 99,
+          "failed": 1
+        },
+        "failures": {
+          "AsrTimeout": 1
+        },
+        "quality_flags": {
+          "needs_review": 7
+        },
+        "completed_wall_ms": {
+          "n": 99,
+          "p50": 8881,
+          "p95": 11299,
+          "maximum": 13262,
+          "method": "nearest-rank",
+          "at_least_30_observations": true
+        },
+        "completed_rtf": {
+          "n": 99,
+          "p50": 2.3505464480874316,
+          "p95": 5.906692263047457,
+          "maximum": 10.157142857142857,
+          "method": "nearest-rank",
+          "at_least_30_observations": true
+        },
+        "all_attempt_wall_ms": {
+          "n": 100,
+          "p50": 8881,
+          "p95": 11299,
+          "maximum": 15462,
+          "method": "nearest-rank",
+          "at_least_30_observations": true
+        },
+        "duration_buckets": {
+          "0.25–5s": {
+            "attempted": 73,
+            "completed_wall_ms": {
+              "n": 72,
+              "p50": 8793,
+              "p95": 10301,
+              "maximum": 13262,
+              "method": "nearest-rank",
+              "at_least_30_observations": true
+            },
+            "completed_rtf": {
+              "n": 72,
+              "p50": 2.834674922600619,
+              "p95": 6.70390625,
+              "maximum": 10.157142857142857,
+              "method": "nearest-rank",
+              "at_least_30_observations": true
+            }
+          },
+          ">5–15s": {
+            "attempted": 27,
+            "completed_wall_ms": {
+              "n": 27,
+              "p50": 9090,
+              "p95": 11619,
+              "maximum": 12770,
+              "method": "nearest-rank",
+              "at_least_30_observations": false
+            },
+            "completed_rtf": {
+              "n": 27,
+              "p50": 1.2007692307692308,
+              "p95": 1.7111929307805596,
+              "maximum": 1.8047882136279927,
+              "method": "nearest-rank",
+              "at_least_30_observations": false
+            }
+          }
+        }
+      }
+    ],
+    "corpus_duration_seconds": 2485.9609375,
+    "corpus_duration_range_seconds": [
+      0.84,
+      31.74
+    ],
+    "identifiable_ascend_speakers": [
+      7,
+      12,
+      20
+    ]
+  },
+  "model_loads": [
+    {
+      "bundle_sha256": "746b8e700383f695a71ba487aa892a359da62bb8e55020168d28fc97f72bea38",
+      "load_wall_ms": 1313,
+      "model_id": "whisper-large-v3-turbo-q5_0",
+      "profile": "whisper-v1",
+      "type": "model"
+    }
+  ],
+  "environment": {
+    "checked_at": "2026-09-16T08:35:17.680977+00:00",
+    "records": [
+      {
+        "command": [
+          "/usr/sbin/sysctl",
+          "-n",
+          "hw.model",
+          "hw.memsize",
+          "machdep.cpu.brand_string"
+        ],
+        "status": 0,
+        "stdout": "Mac16,1\n34359738368\nApple M4\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/usr/bin/sw_vers"
+        ],
+        "status": 0,
+        "stdout": "ProductName:\t\tmacOS\nProductVersion:\t\t15.6.1\nBuildVersion:\t\t24G90\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/usr/bin/pmset",
+          "-g",
+          "batt"
+        ],
+        "status": 0,
+        "stdout": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=6750307)\t100%; charged; 0:00 remaining present: true\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/usr/bin/pmset",
+          "-g",
+          "custom"
+        ],
+        "status": 0,
+        "stdout": "Battery Power:\n Sleep On Power Button 1\n lowpowermode         0\n standby              1\n ttyskeepawake        1\n hibernatemode        3\n powernap             1\n hibernatefile        /var/vm/sleepimage\n displaysleep         0\n womp                 0\n networkoversleep     0\n sleep                1\n lessbright           1\n tcpkeepalive         1\n disksleep            10\nAC Power:\n Sleep On Power Button 1\n lowpowermode         0\n standby              1\n ttyskeepawake        1\n hibernatemode        3\n powernap             1\n hibernatefile        /var/vm/sleepimage\n displaysleep         0\n womp                 1\n networkoversleep     0\n sleep                1\n tcpkeepalive         1\n disksleep            10\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/usr/bin/pmset",
+          "-g",
+          "therm"
+        ],
+        "status": 0,
+        "stdout": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded\n",
+        "stderr": ""
+      }
+    ]
+  },
+  "concurrent_work": "Source edits, frontend tests/TypeScript, incremental core/desktop tests and isolated desktop UI builds ran during inference. This is not an isolated performance benchmark. One AsrTimeout remains counted as an empty hypothesis; its cause has not been attributed to model behavior or shared CPU load.",
+  "source_lock": {
+    "schema": 1,
+    "purpose": "Developer diagnostics only; not the release acceptance corpus or application assets",
+    "files": [
+      {
+        "dataset": "google/fleurs",
+        "split": "dev",
+        "language": "cmn_hans_cn",
+        "revision": "70bb2e84b976b7e960aa89f1c648e09c59f894dd",
+        "license": "CC-BY-4.0",
+        "filename": "fleurs-cmn_hans_cn-dev.tsv",
+        "url": "https://huggingface.co/datasets/google/fleurs/resolve/70bb2e84b976b7e960aa89f1c648e09c59f894dd/data/cmn_hans_cn/dev.tsv",
+        "size_bytes": 205248,
+        "git_blob_sha1": "bd100387f1cc9861653500cbfeda3270d0e8dddf"
+      },
+      {
+        "dataset": "google/fleurs",
+        "split": "dev",
+        "language": "cmn_hans_cn",
+        "revision": "70bb2e84b976b7e960aa89f1c648e09c59f894dd",
+        "license": "CC-BY-4.0",
+        "filename": "fleurs-cmn_hans_cn-dev.tar.gz",
+        "url": "https://huggingface.co/datasets/google/fleurs/resolve/70bb2e84b976b7e960aa89f1c648e09c59f894dd/data/cmn_hans_cn/audio/dev.tar.gz",
+        "size_bytes": 217347747,
+        "sha256": "3bc33212d5974eef7feb04bc4792458d6cd7e14ff10a1a24772f3c45ea87a822"
+      },
+      {
+        "dataset": "google/fleurs",
+        "split": "dev",
+        "language": "en_us",
+        "revision": "70bb2e84b976b7e960aa89f1c648e09c59f894dd",
+        "license": "CC-BY-4.0",
+        "filename": "fleurs-en_us-dev.tsv",
+        "url": "https://huggingface.co/datasets/google/fleurs/resolve/70bb2e84b976b7e960aa89f1c648e09c59f894dd/data/en_us/dev.tsv",
+        "size_bytes": 213065,
+        "git_blob_sha1": "4fca22b561c05159f76a7249d653c3e7677103cf"
+      },
+      {
+        "dataset": "google/fleurs",
+        "split": "dev",
+        "language": "en_us",
+        "revision": "70bb2e84b976b7e960aa89f1c648e09c59f894dd",
+        "license": "CC-BY-4.0",
+        "filename": "fleurs-en_us-dev.tar.gz",
+        "url": "https://huggingface.co/datasets/google/fleurs/resolve/70bb2e84b976b7e960aa89f1c648e09c59f894dd/data/en_us/audio/dev.tar.gz",
+        "size_bytes": 171250900,
+        "sha256": "2658fda72f199e12676ecac9415094667a4e14e149b146e568ea00b2a2f0954c"
+      },
+      {
+        "dataset": "CAiRE/ASCEND",
+        "split": "validation",
+        "language": "mixed",
+        "revision": "737e9800ae31be9932ba8464c80366559bd28424",
+        "license": "CC-BY-SA-4.0",
+        "filename": "ascend-validation.parquet",
+        "url": "https://huggingface.co/datasets/CAiRE/ASCEND/resolve/737e9800ae31be9932ba8464c80366559bd28424/main/validation-00000-of-00001.parquet",
+        "size_bytes": 106532266,
+        "sha256": "3bdec53d2abfd3dd4f0d86a6df4e27e60f20660edc9b66055ae0ef8ec05cf7e2"
+      }
+    ]
+  },
+  "selection": {
+    "seed": "speakmore-public-development-v1",
+    "selection": "SHA256 rank; FLEURS unique prompts; ASCEND labeled mixed with Latin and CJK",
+    "pools": [
+      {
+        "dataset": "google/fleurs",
+        "language": "zh",
+        "total": 409,
+        "unique_eligible_prompts": 150,
+        "invalid": 0,
+        "selected": 100,
+        "speaker_ids": "unavailable in pinned TSV"
+      },
+      {
+        "dataset": "google/fleurs",
+        "language": "en",
+        "total": 394,
+        "unique_eligible_prompts": 150,
+        "invalid": 0,
+        "selected": 100,
+        "speaker_ids": "unavailable in pinned TSV"
+      },
+      {
+        "dataset": "CAiRE/ASCEND",
+        "language": "mixed",
+        "total": 1130,
+        "labeled_mixed": 213,
+        "eligible_bilingual": 213,
+        "selected": 100
+      }
+    ],
+    "source_lock_sha256": "7a7f81052ed81f7b9f16eb73622430ae95b04cb3d471c5c8014bd390399bc029"
+  },
+  "artifacts": {
+    "counts": {
+      "path": "docs/evidence/asr-turbo-quality-2026-09-16.counts.json.gz",
+      "sha256": "1ffb4744c2c824746ab4d9cdad66e43f2970b78252c3d5695e1dc6fcdab2c321",
+      "uncompressed_sha256": "8b2c4828c15d4d31d20be9a97aabbc5cc1888ea9dda277423a80a5ab962dd017",
+      "bytes": 56852,
+      "uncompressed_bytes": 309070
+    },
+    "raw_results": {
+      "path": ".cache/asr-quality/run-v3-turbo/results.jsonl",
+      "sha256": "2463b7ee4fa966cd78d3a430da452835f3febe541c4ac9a37f1123b49b83b296"
+    },
+    "inference_log": {
+      "path": ".cache/asr-quality/run-v3-turbo/inference.log",
+      "sha256": "f79c8fce994df8b84a6636e8fa60c3fd30ae6cbdc93cd0870587228c040aa611"
+    },
+    "manifest": {
+      "path": ".cache/asr-quality/corpus-v1/manifest.json",
+      "sha256": "75bfcce747023da758a8850cc5aea640982240d75b1415020b3f96bc857fce48"
+    }
+  },
+  "source_files": {
+    "crates/asr-worker/tests/quality_corpus.rs": "aa62a441f30dbcbff064799299120b76b2ce7eca0ad14c6d085087b9ab62e016",
+    "crates/asr-worker/Cargo.toml": "1c2beacccd629e046a5d2024b95a0909a0e2e4dfcd705c035fa2e60107cd8316",
+    "crates/asr-worker/src/engine.rs": "1ee5372495ac6f5d516cf8f575631168c0bba0816ba2a966bf803cbfa53a2d78",
+    "crates/asr-worker/src/sensevoice_engine.rs": "71587ffdba099691baaddae2b4f93026b3f7d5623e518fdd0090e1e8d5f38101",
+    "crates/worker-supervisor/src/lib.rs": "9589d2b3dc538749f1a2cbdad10cced9212cb7b43b28d80cd327df639af52496",
+    "crates/protocol/src/lib.rs": "a50176e525140d96fd8f943925407de524fa817f7f4c7493ee69e545d5243558",
+    "crates/sensevoice/src/native.rs": "37ee20f4e2ed185816cfc2d35d3194e427e9459d4144b26f95d08f1b0186651d",
+    "Cargo.lock": "54347c7a78b3f4a724f6fbcf139117945f1ee647ea16a9e11ccf535662e77b69",
+    "resources/asr-quality-sources.lock.json": "7a7f81052ed81f7b9f16eb73622430ae95b04cb3d471c5c8014bd390399bc029",
+    "resources/model-catalog.payload.json": "30a8e6d4b56d69bbc6204004c1a2d008a927a80055c08762a2883a215d87fb1a",
+    "scripts/diagnostics/download-quality-corpus.py": "b7a368c07142c078444339722b947a74ea16908e50956c176653545d4ace8549",
+    "scripts/diagnostics/prepare-quality-corpus.py": "36dcc02f8c460b59f449c4f857aa5129f5b994f7344c308df6fa94674ac11642",
+    "scripts/diagnostics/score-quality-corpus.py": "6ad9c589f105f6f08ac2abf5909b240795825ebeb4ba98b6bf101ccd1144d526",
+    "scripts/diagnostics/test_quality_score.py": "65f422cf2e2ab1c6d5297644e93dad93c502b582654b25d8b5c5ce5d8ae53af0",
+    "scripts/diagnostics/quality-requirements.txt": "766ad8dfa5ebb9b75fa48089a5104b28e049d14f50e33279dae0f4c579d4d7c2"
+  },
+  "verification": {
+    "complete_attempts": 300,
+    "runner_test": "1 passed, 2607.74s; successful diagnostic execution is not an accuracy pass",
+    "frozen_runner_sha256": "2fe2ca5688b2c6974f2a7a41da5fc09be79229eca977bc22bdbc22e047464438",
+    "same_runner_and_manifest_as_first_600_attempts": true,
+    "worker_stopped_before_app_worker_preparation": true
+  },
+  "detected_languages": {
+    "zh": {
+      "zh": 100
+    },
+    "en": {
+      "en": 100
+    },
+    "mixed": {
+      "zh": 60,
+      "en": 37,
+      "ru": 1,
+      "id": 1
+    }
+  },
+  "failures": [
+    {
+      "accepted_events": 1,
+      "error": "AsrTimeout",
+      "id": "ascend/validation/00067",
+      "model_id": "whisper-large-v3-turbo-q5_0",
+      "stages": [
+        "decoding",
+        "detecting_speech"
+      ],
+      "status": "failed",
+      "type": "result",
+      "wall_ms": 15462,
+      "samples": 47041
+    }
+  ]
+}

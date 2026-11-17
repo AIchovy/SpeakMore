@@ -1,0 +1,25 @@
+Additional local speech models — SpeakMore
+
+Parakeet TDT 0.6B v3
+Original model: NVIDIA, https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
+Downloaded weights are an ONNX INT8 conversion by the sherpa-onnx community:
+https://huggingface.co/csukuangfj/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8
+The original format was converted and quantized. NVIDIA does not endorse SpeakMore.
+
+Qwen3-ASR 0.6B
+Original model: Qwen Team, https://huggingface.co/Qwen/Qwen3-ASR-0.6B
+License: Apache License 2.0, https://www.apache.org/licenses/LICENSE-2.0
+ONNX conversion: https://github.com/Wasser1462/Qwen3-ASR-onnx
+Published ONNX INT8 weights:
+https://huggingface.co/csukuangfj2/sherpa-onnx-qwen3-asr-0.6B-int8-2026-03-25
+Tokenizer files are installed alongside the ONNX models with unchanged contents.
+
+Zipformer English 20M streaming
+Original source: https://huggingface.co/desh2608/icefall-asr-librispeech-pruned-transducer-stateless7-streaming-small
+ONNX conversion: https://huggingface.co/csukuangfj/sherpa-onnx-streaming-zipformer-en-20M-2023-02-17
+License indicated by the model repository: Apache License 2.0
+
+All weights are downloaded on demand and are not bundled with the application.
+Fixed revisions, file sizes and SHA-256 values are recorded in the model catalogs.

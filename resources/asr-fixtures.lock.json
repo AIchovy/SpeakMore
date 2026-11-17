@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "fixtures": [
+    {
+      "filename": "jfk.wav",
+      "url": "https://raw.githubusercontent.com/ggml-org/whisper.cpp/v1.8.3/samples/jfk.wav",
+      "size_bytes": 352078,
+      "sha256": "59dfb9a4acb36fe2a2affc14bacbee2920ff435cb13cc314a08c13f66ba7860e",
+      "source": "whisper.cpp v1.8.3 public example audio, JFK inaugural address excerpt",
+      "usage": "Local engineering fixture only; repeated audio is not the release quality corpus"
+    }
+  ]
+}

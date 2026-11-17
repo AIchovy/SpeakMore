@@ -1,0 +1,70 @@
+[package]
+name = "speakmore-desktop"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+
+[lib]
+name = "speakmore_desktop"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+speakmore-models = { path = "../crates/models" }
+serde_json.workspace = true
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon"] }
+tauri-plugin-single-instance = "2"
+speakmore-core = { path = "../crates/core" }
+speakmore-protocol = { path = "../crates/protocol" }
+speakmore-models = { path = "../crates/models" }
+speakmore-audio = { path = "../crates/audio" }
+speakmore-worker-supervisor = { path = "../crates/worker-supervisor" }
+speakmore-providers = { path = "../crates/providers" }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "time", "sync"] }
+serde.workspace = true
+serde_json.workspace = true
+uuid.workspace = true
+arboard = "3"
+base64 = "0.22"
+libloading = "0.8"
+chrono = "0.4"
+tempfile = "3"
+zeroize = "1.9"
+url = "2.5"
+tokio-util = { version = "0.7", features = ["rt"] }
+hound = "3.5"
+reqwest = { version = "=0.13.5", default-features = false, features = ["rustls", "stream"] }
+
+[dev-dependencies]
+ed25519-dalek = "2.2"
+sha2 = "0.10"
+tempfile = "3"
+hound = "3.5"
+rusqlite = { version = "0.37", features = ["bundled"] }
+
+[features]
+target-audit = []
+model-check = []
+model-audio-check = ["model-check"]
+session-fixtures = ["speakmore-worker-supervisor/test-fixtures"]
+
+[target.'cfg(any(target_os = "macos", windows, target_os = "linux"))'.dependencies]
+tauri-plugin-global-shortcut = "2.3.2"
+
+[target.'cfg(target_os = "macos")'.dependencies]
+keyring = { version = "=3.6.3", default-features = false, features = ["apple-native"] }
+security-framework = "3.7"
+core-foundation = "0.10"
+tauri = { version = "2", features = ["macos-private-api"] }
+objc2 = "0.6.4"
+block2 = "0.6.2"
+objc2-core-graphics = { version = "0.3.2", default-features = false, features = ["std", "CGSession"] }
+objc2-core-foundation = { version = "0.3.2", default-features = false, features = ["std", "CFDictionary", "CFNumber", "CFString"] }
+objc2-app-kit = { version = "0.3.2", default-features = false, features = ["std", "NSSound", "NSPanel", "NSWindow", "NSView", "NSResponder", "NSColor", "NSGraphicsContext", "NSScreen", "NSWorkspace", "NSSavePanel", "NSOpenPanel", "NSApplication", "NSRunningApplication", "NSPasteboard", "NSPasteboardItem", "libc", "block2"] }
+objc2-foundation = { version = "0.3.2", default-features = false, features = ["std", "NSObject", "NSGeometry", "NSNotification", "NSOperation", "NSDate", "NSArray", "NSData", "NSString", "NSBundle", "NSDictionary", "NSURL", "NSLocale", "block2"] }
+sha2 = "0.10"
+
+[target.'cfg(windows)'.dependencies]
+keyring = { version = "=3.6.3", default-features = false, features = ["windows-native"] }

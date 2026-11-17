@@ -1,0 +1,18 @@
+[package]
+name = "speakmore-audio"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+cpal = "=0.18.2"
+rubato = "0.16"
+ringbuf = "0.4"
+serde.workspace = true
+uuid.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+hound = "3.5"
+speakmore-protocol = { path = "../protocol" }
+serde_json.workspace = true

@@ -1,0 +1,218 @@
+{
+  "schema": 1,
+  "date": "2026-09-16",
+  "status": "worker_candidate_validated_not_released",
+  "command": "SPEAKMORE_TEST_TILED_REPORT=\"$PWD/.cache/sensevoice/graph-study/tiled-e0zkpzmp/report.json\" npm run test:asr:sensevoice:tiled",
+  "result": {
+    "passed": 2,
+    "failed": 0,
+    "duration_seconds": 224.0
+  },
+  "raw_protocol_checks": {
+    "candidate_rejects_legacy_request": true,
+    "legacy_rejects_candidate_request": true,
+    "correct_request_works_after_each_rejection": true
+  },
+  "source": ".cache/sensevoice/worker-study/run-xN6eoV/report.json",
+  "sha256": "b22bf428018433554b9073406e037bd0d19ff30525a0596ce9ec7c3a3c89def5",
+  "report": {
+    "after_cancel": {
+      "asr_ms": 314,
+      "case": "en",
+      "language": "en",
+      "text_bytes": 81,
+      "text_sha256": "f1685c2e7e2fe9da177adcb96c4420ae848e82df2952bbf8aef82a5f768d744f"
+    },
+    "after_failed_switch": {
+      "asr_ms": 292,
+      "case": "zh",
+      "language": "zh",
+      "text_bytes": 38,
+      "text_sha256": "3dcf3d55f672e2d610a031580f924b47ddf147ff3d93f007b8386f9bef8cac58"
+    },
+    "after_legacy_switch": {
+      "asr_ms": 354,
+      "case": "en",
+      "language": "en",
+      "text_bytes": 81,
+      "text_sha256": "f1685c2e7e2fe9da177adcb96c4420ae848e82df2952bbf8aef82a5f768d744f"
+    },
+    "after_return_to_candidate": {
+      "asr_ms": 341,
+      "case": "en",
+      "language": "en",
+      "text_bytes": 81,
+      "text_sha256": "f1685c2e7e2fe9da177adcb96c4420ae848e82df2952bbf8aef82a5f768d744f"
+    },
+    "after_whisper_switch": {
+      "asr_ms": 1035,
+      "case": "en",
+      "language": "en",
+      "text_bytes": 81,
+      "text_sha256": "84168398468f9d08aaa8cbfa92cc2cb1a9724b5f63bcf631c5bfc50cf9c73095"
+    },
+    "baseline_profile": "sensevoice-v1",
+    "cancel_to_reaped_ms": 1019,
+    "candidate": {
+      "graph_bytes": 239537160,
+      "graph_sha256": "46346d31c9314b4873aa16882f20955774cda4048a849c80db2a27117569a3d8",
+      "report": ".cache/sensevoice/graph-study/tiled-e0zkpzmp/report.json",
+      "report_sha256": "0e8feacb774924e2a5c2853e0722d17ec0d7d725bd53a314c3d36067e6e431d9"
+    },
+    "comparisons": [
+      {
+        "baseline": {
+          "asr_ms": 281,
+          "case": "zh",
+          "language": "zh",
+          "text_bytes": 38,
+          "text_sha256": "3dcf3d55f672e2d610a031580f924b47ddf147ff3d93f007b8386f9bef8cac58"
+        },
+        "candidate": {
+          "asr_ms": 281,
+          "case": "zh",
+          "language": "zh",
+          "text_bytes": 38,
+          "text_sha256": "3dcf3d55f672e2d610a031580f924b47ddf147ff3d93f007b8386f9bef8cac58"
+        },
+        "text_and_language_identical": true
+      },
+      {
+        "baseline": {
+          "asr_ms": 298,
+          "case": "en",
+          "language": "en",
+          "text_bytes": 81,
+          "text_sha256": "f1685c2e7e2fe9da177adcb96c4420ae848e82df2952bbf8aef82a5f768d744f"
+        },
+        "candidate": {
+          "asr_ms": 344,
+          "case": "en",
+          "language": "en",
+          "text_bytes": 81,
+          "text_sha256": "f1685c2e7e2fe9da177adcb96c4420ae848e82df2952bbf8aef82a5f768d744f"
+        },
+        "text_and_language_identical": true
+      },
+      {
+        "baseline": {
+          "asr_ms": 195,
+          "case": "yue",
+          "language": "yue",
+          "text_bytes": 48,
+          "text_sha256": "641915af0edd810f33eb41d30c30d47bf95bb9ad4519cc5b59a80005abe2f89f"
+        },
+        "candidate": {
+          "asr_ms": 237,
+          "case": "yue",
+          "language": "yue",
+          "text_bytes": 48,
+          "text_sha256": "641915af0edd810f33eb41d30c30d47bf95bb9ad4519cc5b59a80005abe2f89f"
+        },
+        "text_and_language_identical": true
+      },
+      {
+        "baseline": {
+          "asr_ms": 370,
+          "case": "ja",
+          "language": "ja",
+          "text_bytes": 116,
+          "text_sha256": "66931dd620deef5bede68943f2ba1cf09e5171b0a5674c702d838e5bf58b86ac"
+        },
+        "candidate": {
+          "asr_ms": 362,
+          "case": "ja",
+          "language": "ja",
+          "text_bytes": 116,
+          "text_sha256": "66931dd620deef5bede68943f2ba1cf09e5171b0a5674c702d838e5bf58b86ac"
+        },
+        "text_and_language_identical": true
+      },
+      {
+        "baseline": {
+          "asr_ms": 183,
+          "case": "ko",
+          "language": "ko",
+          "text_bytes": 62,
+          "text_sha256": "98dcaf1b6d63453394490940ddf8216ef5944e961bd916c8d0a1c76124a170f4"
+        },
+        "candidate": {
+          "asr_ms": 221,
+          "case": "ko",
+          "language": "ko",
+          "text_bytes": 62,
+          "text_sha256": "98dcaf1b6d63453394490940ddf8216ef5944e961bd916c8d0a1c76124a170f4"
+        },
+        "text_and_language_identical": true
+      },
+      {
+        "baseline": {
+          "asr_ms": 31399,
+          "case": "en300",
+          "language": "en",
+          "text_bytes": 2720,
+          "text_sha256": "51ddeebb2d28d200963b59d71a8f116614da579f6efe3862c4e1a8fcf190cbd0"
+        },
+        "candidate": {
+          "asr_ms": 34077,
+          "case": "en300",
+          "language": "en",
+          "text_bytes": 2720,
+          "text_sha256": "51ddeebb2d28d200963b59d71a8f116614da579f6efe3862c4e1a8fcf190cbd0"
+        },
+        "text_and_language_identical": true
+      },
+      {
+        "baseline": {
+          "asr_ms": 31651,
+          "case": "mixed300",
+          "language": "ja",
+          "text_bytes": 596,
+          "text_sha256": "2096c2295744804428bec95889baf23adbaee882ed3c0eb1184932625ee209a1"
+        },
+        "candidate": {
+          "asr_ms": 34328,
+          "case": "mixed300",
+          "language": "ja",
+          "text_bytes": 596,
+          "text_sha256": "2096c2295744804428bec95889baf23adbaee882ed3c0eb1184932625ee209a1"
+        },
+        "text_and_language_identical": true
+      }
+    ],
+    "completed": true,
+    "installation_id": "sensevoice-small-int8--449f53e709f54de54d48c2bbfa225bd5d2f69e9ad620f78c946cd69de9dc16d2",
+    "max_samples": 4800000,
+    "profile": "sensevoice-tiled256-v1",
+    "schema": 1,
+    "scope": "real supervisor / IPC / VAD / CPU workers; public fixtures only; no GUI or microphone; no memory measurement",
+    "silence300_no_speech": true
+  },
+  "sources": {
+    "crates/asr-worker/tests/sensevoice_tiled.rs": "52aeb222af4d1ee58c740f1cec6eb4f27b622e192b8abedf7eb92646f3ff7b89",
+    "crates/asr-worker/src/runtime.rs": "1a9e6bed59a700bbb25f1426b28811c3712273bd6e3ee2d62dd3c9b20b642cae",
+    "crates/asr-worker/src/sensevoice_engine.rs": "71587ffdba099691baaddae2b4f93026b3f7d5623e518fdd0090e1e8d5f38101",
+    "resources/model-catalog.signed.json": "584e75b2af9f5eaae57d4e210da6263b18c4d5a39cb4df7a1876cd2ed46971c7",
+    "resources/sensevoice-native.lock.json": "7ee55e67ec960aa4b91b80fd8720e7ccae2cb0d11ce6a60325de22d7d2bf3786"
+  },
+  "limitations": [
+    "No GUI or microphone",
+    "No new memory measurement; prior native-only memory results remain separate",
+    "No natural speech quality or minimum-device acceptance",
+    "No production catalog/signing changes",
+    "Test metadata uses an unpublished synthetic version identity"
+  ],
+  "regression": {
+    "model_protocol_workers_supervisor": {
+      "passed": 51,
+      "ignored": 12
+    },
+    "desktop_session_fixtures_target_audit": {
+      "passed": 86,
+      "ignored": 12
+    },
+    "clippy_changed_crates_all_targets": true,
+    "clippy_desktop_all_targets": true,
+    "notes": "Loopback HTTP fixtures required sandbox escalation. Ignored tests are not counted as passed; the two candidate integration tests ran separately."
+  }
+}

@@ -1,0 +1,343 @@
+{
+  "schema_version": 1,
+  "models": [
+    {
+      "model_id": "whisper-small-q5_1",
+      "display_name": "Whisper small",
+      "family": "whisper",
+      "engine_id": "whisper.cpp",
+      "engine_profile": "whisper-v1",
+      "quantization": "q5_1",
+      "languages": [
+        "multilingual"
+      ],
+      "revision": "5359861c739e955e79d9a303bcbc70fb988958b1",
+      "minimum_worker_build": "0.1.0",
+      "platforms": [
+        "macos-aarch64"
+      ],
+      "capabilities": {
+        "dictionary_prompt": true,
+        "max_duration_ms": 300000
+      },
+      "artifacts": [
+        {
+          "role": "model",
+          "filename": "ggml-small-q5_1.bin",
+          "revision": "5359861c739e955e79d9a303bcbc70fb988958b1",
+          "size_bytes": 190085487,
+          "sha256": "ae85e4a935d7a567bd102fe55afc16bb595bdb618e11b2fc7591bc08120411bb",
+          "url": "https://huggingface.co/ggerganov/whisper.cpp/resolve/5359861c739e955e79d9a303bcbc70fb988958b1/ggml-small-q5_1.bin",
+          "license": "MIT"
+        },
+        {
+          "role": "vad",
+          "filename": "ggml-silero-v6.2.0.bin",
+          "revision": "9ffd54a1e1ee413ddf265af9913beaf518d1639b",
+          "size_bytes": 885098,
+          "sha256": "2aa269b785eeb53a82983a20501ddf7c1d9c48e33ab63a41391ac6c9f7fb6987",
+          "url": "https://huggingface.co/ggml-org/whisper-vad/resolve/9ffd54a1e1ee413ddf265af9913beaf518d1639b/ggml-silero-v6.2.0.bin",
+          "license": "MIT"
+        }
+      ]
+    },
+    {
+      "model_id": "whisper-large-v3-turbo-q5_0",
+      "display_name": "Whisper large-v3-turbo",
+      "family": "whisper",
+      "engine_id": "whisper.cpp",
+      "engine_profile": "whisper-v1",
+      "quantization": "q5_0",
+      "languages": [
+        "multilingual"
+      ],
+      "revision": "5359861c739e955e79d9a303bcbc70fb988958b1",
+      "minimum_worker_build": "0.1.0",
+      "platforms": [
+        "macos-aarch64"
+      ],
+      "capabilities": {
+        "dictionary_prompt": true,
+        "max_duration_ms": 300000
+      },
+      "artifacts": [
+        {
+          "role": "model",
+          "filename": "ggml-large-v3-turbo-q5_0.bin",
+          "revision": "5359861c739e955e79d9a303bcbc70fb988958b1",
+          "size_bytes": 574041195,
+          "sha256": "394221709cd5ad1f40c46e6031ca61bce88931e6e088c188294c6d5a55ffa7e2",
+          "url": "https://huggingface.co/ggerganov/whisper.cpp/resolve/5359861c739e955e79d9a303bcbc70fb988958b1/ggml-large-v3-turbo-q5_0.bin",
+          "license": "MIT"
+        },
+        {
+          "role": "vad",
+          "filename": "ggml-silero-v6.2.0.bin",
+          "revision": "9ffd54a1e1ee413ddf265af9913beaf518d1639b",
+          "size_bytes": 885098,
+          "sha256": "2aa269b785eeb53a82983a20501ddf7c1d9c48e33ab63a41391ac6c9f7fb6987",
+          "url": "https://huggingface.co/ggml-org/whisper-vad/resolve/9ffd54a1e1ee413ddf265af9913beaf518d1639b/ggml-silero-v6.2.0.bin",
+          "license": "MIT"
+        }
+      ]
+    },
+    {
+      "model_id": "sensevoice-small-int8",
+      "display_name": "SenseVoice Small",
+      "family": "sensevoice",
+      "engine_id": "sherpa-onnx",
+      "engine_profile": "sensevoice-v1",
+      "quantization": "int8",
+      "languages": [
+        "zh",
+        "yue",
+        "en",
+        "ja",
+        "ko"
+      ],
+      "revision": "2365baeacb507f821a0c8120fcee3d484dba7a07",
+      "minimum_worker_build": "0.1.0",
+      "platforms": [
+        "macos-aarch64"
+      ],
+      "capabilities": {
+        "dictionary_prompt": false,
+        "max_duration_ms": 300000
+      },
+      "artifacts": [
+        {
+          "role": "model",
+          "filename": "model.int8.onnx",
+          "revision": "2365baeacb507f821a0c8120fcee3d484dba7a07",
+          "size_bytes": 239233841,
+          "sha256": "c71f0ce00bec95b07744e116345e33d8cbbe08cef896382cf907bf4b51a2cd51",
+          "url": "https://huggingface.co/csukuangfj/sherpa-onnx-sense-voice-zh-en-ja-ko-yue-2024-07-17/resolve/2365baeacb507f821a0c8120fcee3d484dba7a07/model.int8.onnx",
+          "license": "FunASR Model Open Source License Agreement 1.1"
+        },
+        {
+          "role": "tokens",
+          "filename": "tokens.txt",
+          "revision": "2365baeacb507f821a0c8120fcee3d484dba7a07",
+          "size_bytes": 315894,
+          "sha256": "f449eb28dc567533d7fa59be34e2abca8784f771850c78a47fb731a31429a1dc",
+          "url": "https://huggingface.co/csukuangfj/sherpa-onnx-sense-voice-zh-en-ja-ko-yue-2024-07-17/resolve/2365baeacb507f821a0c8120fcee3d484dba7a07/tokens.txt",
+          "license": "FunASR Model Open Source License Agreement 1.1"
+        },
+        {
+          "role": "vad",
+          "filename": "silero_vad_v5.onnx",
+          "revision": "fba88cd2e921609e7675c3aaf51e0b9b295da4bc",
+          "size_bytes": 2313101,
+          "sha256": "6b99cbfd39246b6706f98ec13c7c50c6b299181f2474fa05cbc8046acc274396",
+          "url": "https://huggingface.co/csukuangfj/vad/resolve/fba88cd2e921609e7675c3aaf51e0b9b295da4bc/silero_vad_v5.onnx",
+          "license": "MIT"
+        }
+      ]
+    },
+    {
+      "model_id": "parakeet-tdt-v3-int8",
+      "display_name": "Parakeet TDT v3",
+      "family": "parakeet",
+      "engine_id": "sherpa-onnx",
+      "engine_profile": "parakeet-tdt-v3-int8-v1",
+      "quantization": "int8",
+      "languages": [
+        "bg",
+        "hr",
+        "cs",
+        "da",
+        "nl",
+        "en",
+        "et",
+        "fi",
+        "fr",
+        "de",
+        "el",
+        "hu",
+        "it",
+        "lv",
+        "lt",
+        "mt",
+        "pl",
+        "pt",
+        "ro",
+        "sk",
+        "sl",
+        "es",
+        "sv",
+        "ru",
+        "uk"
+      ],
+      "revision": "2bda32ec70b097a55adaa07d9a7173915b43cc78",
+      "minimum_worker_build": "0.1.0",
+      "platforms": [
+        "macos-aarch64"
+      ],
+      "capabilities": {
+        "dictionary_prompt": false,
+        "max_duration_ms": 300000
+      },
+      "artifacts": [
+        {
+          "role": "model",
+          "filename": "encoder.int8.onnx",
+          "revision": "2bda32ec70b097a55adaa07d9a7173915b43cc78",
+          "size_bytes": 652184281,
+          "sha256": "acfc2b4456377e15d04f0243af540b7fe7c992f8d898d751cf134c3a55fd2247",
+          "url": "https://huggingface.co/csukuangfj/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8/resolve/2bda32ec70b097a55adaa07d9a7173915b43cc78/encoder.int8.onnx",
+          "license": "CC-BY-4.0"
+        },
+        {
+          "role": "decoder",
+          "filename": "decoder.int8.onnx",
+          "revision": "2bda32ec70b097a55adaa07d9a7173915b43cc78",
+          "size_bytes": 11845275,
+          "sha256": "179e50c43d1a9de79c8a24149a2f9bac6eb5981823f2a2ed88d655b24248db4e",
+          "url": "https://huggingface.co/csukuangfj/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8/resolve/2bda32ec70b097a55adaa07d9a7173915b43cc78/decoder.int8.onnx",
+          "license": "CC-BY-4.0"
+        },
+        {
+          "role": "joiner",
+          "filename": "joiner.int8.onnx",
+          "revision": "2bda32ec70b097a55adaa07d9a7173915b43cc78",
+          "size_bytes": 6355277,
+          "sha256": "3164c13fc2821009440d20fcb5fdc78bff28b4db2f8d0f0b329101719c0948b3",
+          "url": "https://huggingface.co/csukuangfj/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8/resolve/2bda32ec70b097a55adaa07d9a7173915b43cc78/joiner.int8.onnx",
+          "license": "CC-BY-4.0"
+        },
+        {
+          "role": "tokens",
+          "filename": "tokens.txt",
+          "revision": "2bda32ec70b097a55adaa07d9a7173915b43cc78",
+          "size_bytes": 93939,
+          "sha256": "d58544679ea4bc6ac563d1f545eb7d474bd6cfa467f0a6e2c1dc1c7d37e3c35d",
+          "url": "https://huggingface.co/csukuangfj/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8/resolve/2bda32ec70b097a55adaa07d9a7173915b43cc78/tokens.txt",
+          "license": "CC-BY-4.0"
+        },
+        {
+          "role": "vad",
+          "filename": "silero_vad_v5.onnx",
+          "revision": "fba88cd2e921609e7675c3aaf51e0b9b295da4bc",
+          "size_bytes": 2313101,
+          "sha256": "6b99cbfd39246b6706f98ec13c7c50c6b299181f2474fa05cbc8046acc274396",
+          "url": "https://huggingface.co/csukuangfj/vad/resolve/fba88cd2e921609e7675c3aaf51e0b9b295da4bc/silero_vad_v5.onnx",
+          "license": "MIT"
+        }
+      ]
+    },
+    {
+      "model_id": "qwen3-asr-0.6b-int8",
+      "display_name": "Qwen3-ASR 0.6B",
+      "family": "qwen-asr",
+      "engine_id": "sherpa-onnx",
+      "engine_profile": "qwen3-asr-0.6b-int8-v1",
+      "quantization": "int8",
+      "languages": [
+        "zh",
+        "en",
+        "yue",
+        "ar",
+        "de",
+        "fr",
+        "es",
+        "pt",
+        "id",
+        "it",
+        "ko",
+        "ru",
+        "th",
+        "vi",
+        "ja",
+        "tr",
+        "hi",
+        "ms",
+        "nl",
+        "sv",
+        "da",
+        "fi",
+        "pl",
+        "cs",
+        "fil",
+        "fa",
+        "el",
+        "hu",
+        "mk",
+        "ro"
+      ],
+      "revision": "68818b2313fe77bd06f6a7c5068ff3ef59d02b8a",
+      "minimum_worker_build": "0.1.0",
+      "platforms": [
+        "macos-aarch64"
+      ],
+      "capabilities": {
+        "dictionary_prompt": false,
+        "max_duration_ms": 300000
+      },
+      "artifacts": [
+        {
+          "role": "model",
+          "filename": "encoder.int8.onnx",
+          "revision": "68818b2313fe77bd06f6a7c5068ff3ef59d02b8a",
+          "size_bytes": 182491662,
+          "sha256": "60748d3e6744a57c9c91e1b17424a6c2990567e8adceb0783940c03ed98fa9d9",
+          "url": "https://huggingface.co/csukuangfj2/sherpa-onnx-qwen3-asr-0.6B-int8-2026-03-25/resolve/68818b2313fe77bd06f6a7c5068ff3ef59d02b8a/encoder.int8.onnx",
+          "license": "Apache-2.0"
+        },
+        {
+          "role": "frontend",
+          "filename": "conv_frontend.onnx",
+          "revision": "68818b2313fe77bd06f6a7c5068ff3ef59d02b8a",
+          "size_bytes": 44148281,
+          "sha256": "d22dc4423e0940e49884e903d2ea2f7e5567c14fc1aed97e4e26d6b8f208ef9e",
+          "url": "https://huggingface.co/csukuangfj2/sherpa-onnx-qwen3-asr-0.6B-int8-2026-03-25/resolve/68818b2313fe77bd06f6a7c5068ff3ef59d02b8a/conv_frontend.onnx",
+          "license": "Apache-2.0"
+        },
+        {
+          "role": "decoder",
+          "filename": "decoder.int8.onnx",
+          "revision": "68818b2313fe77bd06f6a7c5068ff3ef59d02b8a",
+          "size_bytes": 755914231,
+          "sha256": "4f6885be5959ae26af3089d38ee7972c5fafbeeb1cf8d5e76eab6d8b61ca5771",
+          "url": "https://huggingface.co/csukuangfj2/sherpa-onnx-qwen3-asr-0.6B-int8-2026-03-25/resolve/68818b2313fe77bd06f6a7c5068ff3ef59d02b8a/decoder.int8.onnx",
+          "license": "Apache-2.0"
+        },
+        {
+          "role": "vocab",
+          "filename": "vocab.json",
+          "revision": "68818b2313fe77bd06f6a7c5068ff3ef59d02b8a",
+          "size_bytes": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "url": "https://huggingface.co/csukuangfj2/sherpa-onnx-qwen3-asr-0.6B-int8-2026-03-25/resolve/68818b2313fe77bd06f6a7c5068ff3ef59d02b8a/tokenizer/vocab.json",
+          "license": "Apache-2.0"
+        },
+        {
+          "role": "merges",
+          "filename": "merges.txt",
+          "revision": "68818b2313fe77bd06f6a7c5068ff3ef59d02b8a",
+          "size_bytes": 1671853,
+          "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+          "url": "https://huggingface.co/csukuangfj2/sherpa-onnx-qwen3-asr-0.6B-int8-2026-03-25/resolve/68818b2313fe77bd06f6a7c5068ff3ef59d02b8a/tokenizer/merges.txt",
+          "license": "Apache-2.0"
+        },
+        {
+          "role": "tokenizer-config",
+          "filename": "tokenizer_config.json",
+          "revision": "68818b2313fe77bd06f6a7c5068ff3ef59d02b8a",
+          "size_bytes": 12487,
+          "sha256": "4942d005604266809309cabc9f4e9cb89ce855d59b14681fdc0e1cc62ea26c4c",
+          "url": "https://huggingface.co/csukuangfj2/sherpa-onnx-qwen3-asr-0.6B-int8-2026-03-25/resolve/68818b2313fe77bd06f6a7c5068ff3ef59d02b8a/tokenizer/tokenizer_config.json",
+          "license": "Apache-2.0"
+        },
+        {
+          "role": "vad",
+          "filename": "silero_vad_v5.onnx",
+          "revision": "fba88cd2e921609e7675c3aaf51e0b9b295da4bc",
+          "size_bytes": 2313101,
+          "sha256": "6b99cbfd39246b6706f98ec13c7c50c6b299181f2474fa05cbc8046acc274396",
+          "url": "https://huggingface.co/csukuangfj/vad/resolve/fba88cd2e921609e7675c3aaf51e0b9b295da4bc/silero_vad_v5.onnx",
+          "license": "MIT"
+        }
+      ]
+    }
+  ]
+}

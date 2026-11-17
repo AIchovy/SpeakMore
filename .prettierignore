@@ -1,0 +1,10 @@
+node_modules
+dist
+target
+.cache
+src-tauri/gen
+speakmore-*.html
+speakmore-*.md
+migrations
+Cargo.lock
+package-lock.json

@@ -1,0 +1,14 @@
+[package]
+name = "speakmore-sensevoice"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+
+[build-dependencies]
+bindgen = "=0.72.1"
+sha2 = "0.10"
+serde_json.workspace = true
+
+[dev-dependencies]
+hound = "3.5"
+sha2 = "0.10"

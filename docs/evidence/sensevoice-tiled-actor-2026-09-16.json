@@ -1,0 +1,489 @@
+{
+  "schema": 1,
+  "date": "2026-09-16",
+  "status": "actor_candidate_validated_not_gui_gate",
+  "hardware": {
+    "model": "Mac16,1",
+    "cpu": "Apple M4",
+    "physical_memory_bytes": 34359738368,
+    "macos": "15.6.1"
+  },
+  "source": ".cache/sensevoice/actor-study/run-93g1m21a/report.json",
+  "source_sha256": "0bfaa291f69d86ad89a7a484be042baaadf9875f4a311d8bedbca743acfeb865",
+  "samples": {
+    "path": "docs/evidence/sensevoice-tiled-actor-2026-09-16.samples.jsonl.gz",
+    "sha256": "1d89cb0bd7c032c8cd09e360a146e86b91c5599e9afdc8644264346db8c18dce",
+    "uncompressed_sha256": "188b67ea1eceb4fee0e78b80cb977a369c04285849639fd0e7346a84f1eae6fc"
+  },
+  "stdout_sha256": "be6475343630bf361f11cf1b9c0328d4f54b320590c7be0850dbf8e680fdafa9",
+  "summary": {
+    "samples": 3310,
+    "incomplete_samples": 40,
+    "elapsed_seconds": 343.925,
+    "max_sample_gap_ms": 123.369,
+    "max_read_window_ms": 63.661,
+    "median_read_window_ms": 3.4124999999999996,
+    "max_sum_rss_bytes": 1305083904,
+    "max_sum_footprint_bytes": 1197164800,
+    "max_host_rss_bytes": 42074112,
+    "max_host_footprint_bytes": 31621816,
+    "max_worker_count_in_complete_samples": 1,
+    "recorded_worker_identities_reaped": true
+  },
+  "report": {
+    "schema": 1,
+    "completed": true,
+    "scope": "desktop actor test host + descendant CPU workers; no WebView, GUI, microphone or real-time capture",
+    "profile": "debug test host with release packaged workers",
+    "platform": "macOS-15.6.1-arm64-arm-64bit",
+    "sample_interval_target_ms": 100,
+    "sources": {
+      "scripts/diagnostics/macos-process-tree-memory.c": "9eba60b8cb4f093b99aa78c6ea78a9a8a48d112c356dd4909428a642dcbf5f1f",
+      "scripts/diagnostics/sensevoice-actor-memory.py": "c5fee31b9842c4d9a36adf63c91a974fe118c4d23d4e68db7aeccfa4cd5e9b30",
+      "src-tauri/src/session_runtime/tests/tiled.rs": "803a69f44eca245bf022d51eb422a93d3ab017694a7bc17c9a843576b15e7658",
+      ".cache/sensevoice/graph-study/tiled-e0zkpzmp/report.json": "0e8feacb774924e2a5c2853e0722d17ec0d7d725bd53a314c3d36067e6e431d9",
+      "target/debug/deps/speakmore_desktop-b629af0c73d72eb6": "3f6beb5b548fe99f7da46cd99d5c0a5013f7a52220070331000704937ab10d4f",
+      "target/release/bundle/macos/SpeakMore.app/Contents/Resources/workers/speakmore-asr-worker": "e29a96cf5b747042834079d35dfe024165ceab6fedc0146eaf12ec49e3a5c162",
+      "target/release/bundle/macos/SpeakMore.app/Contents/Resources/workers/speakmore-sensevoice-worker": "2697f98f7ed8b805c3094ac4e3e8c2ec50794b747530d5a9f87710802d9353d1"
+    },
+    "samples": 3310,
+    "incomplete_samples": 40,
+    "events": [
+      {
+        "elapsed_ms": 610,
+        "stage": "preflight"
+      },
+      {
+        "elapsed_ms": 610,
+        "stage": "import_original"
+      },
+      {
+        "elapsed_ms": 16103,
+        "stage": "load_original"
+      },
+      {
+        "elapsed_ms": 25067,
+        "stage": "import_candidate"
+      },
+      {
+        "elapsed_ms": 40334,
+        "stage": "selection_commit_failure"
+      },
+      {
+        "elapsed_ms": 51126,
+        "stage": "load_candidate"
+      },
+      {
+        "elapsed_ms": 60116,
+        "stage": "restart_with_candidate_selected"
+      },
+      {
+        "elapsed_ms": 85278,
+        "stage": "candidate_en300_1"
+      },
+      {
+        "elapsed_ms": 126480,
+        "result": {
+          "asr_ms": 33330,
+          "model": "sensevoice-small-int8--449f53e709f54de54d48c2bbfa225bd5d2f69e9ad620f78c946cd69de9dc16d2",
+          "quota": 1,
+          "samples": 4800000,
+          "session_id": "51643617-a538-4dd9-8644-2aa2be3e07f3",
+          "text_bytes": 2699,
+          "text_sha256": "9079ae94ae1a96a6ea61362836534b2cb192f93754e5d31e37ddd994c6a91275"
+        }
+      },
+      {
+        "elapsed_ms": 126480,
+        "stage": "candidate_en300_2"
+      },
+      {
+        "elapsed_ms": 167345,
+        "result": {
+          "asr_ms": 33039,
+          "model": "sensevoice-small-int8--449f53e709f54de54d48c2bbfa225bd5d2f69e9ad620f78c946cd69de9dc16d2",
+          "quota": 2,
+          "samples": 4800000,
+          "session_id": "c0177789-d0b3-477a-a8dd-ef71cbc278cb",
+          "text_bytes": 2699,
+          "text_sha256": "9079ae94ae1a96a6ea61362836534b2cb192f93754e5d31e37ddd994c6a91275"
+        }
+      },
+      {
+        "elapsed_ms": 167345,
+        "stage": "candidate_en300_3"
+      },
+      {
+        "elapsed_ms": 208181,
+        "result": {
+          "asr_ms": 32906,
+          "model": "sensevoice-small-int8--449f53e709f54de54d48c2bbfa225bd5d2f69e9ad620f78c946cd69de9dc16d2",
+          "quota": 3,
+          "samples": 4800000,
+          "session_id": "871f5592-910f-4c4d-a55e-df3aac822caf",
+          "text_bytes": 2699,
+          "text_sha256": "9079ae94ae1a96a6ea61362836534b2cb192f93754e5d31e37ddd994c6a91275"
+        }
+      },
+      {
+        "elapsed_ms": 208181,
+        "stage": "cancel_processing"
+      },
+      {
+        "elapsed_ms": 212421,
+        "cancel_to_ready_ms": 2175,
+        "quota_unchanged": true
+      },
+      {
+        "elapsed_ms": 212421,
+        "stage": "after_cancel_short"
+      },
+      {
+        "elapsed_ms": 220475,
+        "result": {
+          "asr_ms": 308,
+          "model": "sensevoice-small-int8--449f53e709f54de54d48c2bbfa225bd5d2f69e9ad620f78c946cd69de9dc16d2",
+          "quota": 4,
+          "samples": 114432,
+          "session_id": "e4ee8947-9733-4440-83a1-87946f04306a",
+          "text_bytes": 81,
+          "text_sha256": "f1685c2e7e2fe9da177adcb96c4420ae848e82df2952bbf8aef82a5f768d744f"
+        }
+      },
+      {
+        "elapsed_ms": 220475,
+        "stage": "corrupt_candidate_restore_original"
+      },
+      {
+        "elapsed_ms": 244426,
+        "stage": "after_rejected_candidate"
+      },
+      {
+        "elapsed_ms": 252502,
+        "result": {
+          "asr_ms": 327,
+          "model": "sensevoice-small-int8",
+          "quota": 5,
+          "samples": 114432,
+          "session_id": "586d7acc-bc82-421d-be25-b68a8801dc68",
+          "text_bytes": 81,
+          "text_sha256": "f1685c2e7e2fe9da177adcb96c4420ae848e82df2952bbf8aef82a5f768d744f"
+        }
+      },
+      {
+        "elapsed_ms": 252502,
+        "stage": "restart_original_after_repair"
+      },
+      {
+        "elapsed_ms": 277537,
+        "stage": "import_whisper"
+      },
+      {
+        "elapsed_ms": 289674,
+        "stage": "switch_whisper"
+      },
+      {
+        "elapsed_ms": 304171,
+        "result": {
+          "asr_ms": 1840,
+          "model": "whisper-small-q5_1",
+          "quota": 6,
+          "samples": 114432,
+          "session_id": "87689aed-3b74-4def-bf93-1145d752224c",
+          "text_bytes": 81,
+          "text_sha256": "84168398468f9d08aaa8cbfa92cc2cb1a9724b5f63bcf631c5bfc50cf9c73095"
+        }
+      },
+      {
+        "elapsed_ms": 304171,
+        "stage": "return_candidate"
+      },
+      {
+        "elapsed_ms": 321085,
+        "result": {
+          "asr_ms": 346,
+          "model": "sensevoice-small-int8--449f53e709f54de54d48c2bbfa225bd5d2f69e9ad620f78c946cd69de9dc16d2",
+          "quota": 7,
+          "samples": 114432,
+          "session_id": "801b834b-09bb-47bd-92b3-0c6e7244bc49",
+          "text_bytes": 81,
+          "text_sha256": "f1685c2e7e2fe9da177adcb96c4420ae848e82df2952bbf8aef82a5f768d744f"
+        }
+      },
+      {
+        "elapsed_ms": 321085,
+        "stage": "unload_and_remove_candidate"
+      },
+      {
+        "elapsed_ms": 329780,
+        "stage": "final_restart"
+      },
+      {
+        "elapsed_ms": 343925,
+        "candidate_id": "sensevoice-small-int8--449f53e709f54de54d48c2bbfa225bd5d2f69e9ad620f78c946cd69de9dc16d2",
+        "candidate_sha256": "46346d31c9314b4873aa16882f20955774cda4048a849c80db2a27117569a3d8",
+        "completed": true,
+        "full300_completed": 3,
+        "gui_included": false,
+        "history_rows": 0,
+        "microphone_used": false,
+        "sqlite_integrity": "ok",
+        "successful_results": 7,
+        "usage_events": 7
+      },
+      {
+        "elapsed_ms": 343925,
+        "stage": "finished"
+      }
+    ],
+    "stage_peaks": {
+      "starting": {
+        "max_sum_rss_bytes": 6127616,
+        "max_sum_footprint_bytes": 2982200,
+        "max_host_rss_bytes": 6127616,
+        "max_host_footprint_bytes": 2982200,
+        "max_worker_count": 0,
+        "samples": 6
+      },
+      "import_original": {
+        "max_sum_rss_bytes": 17399808,
+        "max_sum_footprint_bytes": 5538392,
+        "max_host_rss_bytes": 17399808,
+        "max_host_footprint_bytes": 5538392,
+        "max_worker_count": 0,
+        "samples": 152
+      },
+      "load_original": {
+        "max_sum_rss_bytes": 571244544,
+        "max_sum_footprint_bytes": 288949688,
+        "max_host_rss_bytes": 18071552,
+        "max_host_footprint_bytes": 5931632,
+        "max_worker_count": 1,
+        "samples": 88
+      },
+      "import_candidate": {
+        "max_sum_rss_bytes": 590774272,
+        "max_sum_footprint_bytes": 289228312,
+        "max_host_rss_bytes": 18120704,
+        "max_host_footprint_bytes": 5948016,
+        "max_worker_count": 1,
+        "samples": 150
+      },
+      "selection_commit_failure": {
+        "max_sum_rss_bytes": 710443008,
+        "max_sum_footprint_bytes": 301762048,
+        "max_host_rss_bytes": 18628608,
+        "max_host_footprint_bytes": 6439560,
+        "max_worker_count": 1,
+        "samples": 96
+      },
+      "load_candidate": {
+        "max_sum_rss_bytes": 781697024,
+        "max_sum_footprint_bytes": 285755096,
+        "max_host_rss_bytes": 18644992,
+        "max_host_footprint_bytes": 6439560,
+        "max_worker_count": 1,
+        "samples": 88
+      },
+      "restart_with_candidate_selected": {
+        "max_sum_rss_bytes": 548978688,
+        "max_sum_footprint_bytes": 315115056,
+        "max_host_rss_bytes": 19365888,
+        "max_host_footprint_bytes": 7144096,
+        "max_worker_count": 1,
+        "samples": 237
+      },
+      "candidate_en300_1": {
+        "max_sum_rss_bytes": 1305083904,
+        "max_sum_footprint_bytes": 1066174672,
+        "max_host_rss_bytes": 39862272,
+        "max_host_footprint_bytes": 27476664,
+        "max_worker_count": 1,
+        "samples": 402
+      },
+      "candidate_en300_2": {
+        "max_sum_rss_bytes": 1208729600,
+        "max_sum_footprint_bytes": 1197164800,
+        "max_host_rss_bytes": 37879808,
+        "max_host_footprint_bytes": 28345016,
+        "max_worker_count": 1,
+        "samples": 399
+      },
+      "candidate_en300_3": {
+        "max_sum_rss_bytes": 1163640832,
+        "max_sum_footprint_bytes": 1176193280,
+        "max_host_rss_bytes": 38469632,
+        "max_host_footprint_bytes": 29147832,
+        "max_worker_count": 1,
+        "samples": 399
+      },
+      "cancel_processing": {
+        "max_sum_rss_bytes": 1164558336,
+        "max_sum_footprint_bytes": 1176455424,
+        "max_host_rss_bytes": 39108608,
+        "max_host_footprint_bytes": 29377208,
+        "max_worker_count": 1,
+        "samples": 41
+      },
+      "after_cancel_short": {
+        "max_sum_rss_bytes": 539803648,
+        "max_sum_footprint_bytes": 227378808,
+        "max_host_rss_bytes": 39534592,
+        "max_host_footprint_bytes": 29622968,
+        "max_worker_count": 1,
+        "samples": 78
+      },
+      "corrupt_candidate_restore_original": {
+        "max_sum_rss_bytes": 768294912,
+        "max_sum_footprint_bytes": 227526264,
+        "max_host_rss_bytes": 39927808,
+        "max_host_footprint_bytes": 29770424,
+        "max_worker_count": 1,
+        "samples": 232
+      },
+      "after_rejected_candidate": {
+        "max_sum_rss_bytes": 769392640,
+        "max_sum_footprint_bytes": 170755872,
+        "max_host_rss_bytes": 40697856,
+        "max_host_footprint_bytes": 30474936,
+        "max_worker_count": 1,
+        "samples": 78
+      },
+      "restart_original_after_repair": {
+        "max_sum_rss_bytes": 535953408,
+        "max_sum_footprint_bytes": 295487000,
+        "max_host_rss_bytes": 40894464,
+        "max_host_footprint_bytes": 30606008,
+        "max_worker_count": 1,
+        "samples": 232
+      },
+      "import_whisper": {
+        "max_sum_rss_bytes": 560152576,
+        "max_sum_footprint_bytes": 290981472,
+        "max_host_rss_bytes": 40927232,
+        "max_host_footprint_bytes": 30638776,
+        "max_worker_count": 1,
+        "samples": 117
+      },
+      "switch_whisper": {
+        "max_sum_rss_bytes": 572473344,
+        "max_sum_footprint_bytes": 515770120,
+        "max_host_rss_bytes": 41451520,
+        "max_host_footprint_bytes": 31163064,
+        "max_worker_count": 1,
+        "samples": 140
+      },
+      "return_candidate": {
+        "max_sum_rss_bytes": 653426688,
+        "max_sum_footprint_bytes": 318162504,
+        "max_host_rss_bytes": 42041344,
+        "max_host_footprint_bytes": 31621816,
+        "max_worker_count": 1,
+        "samples": 164
+      },
+      "unload_and_remove_candidate": {
+        "max_sum_rss_bytes": 42074112,
+        "max_sum_footprint_bytes": 31572664,
+        "max_host_rss_bytes": 42074112,
+        "max_host_footprint_bytes": 31572664,
+        "max_worker_count": 0,
+        "samples": 74
+      },
+      "final_restart": {
+        "max_sum_rss_bytes": 41926656,
+        "max_sum_footprint_bytes": 31343288,
+        "max_host_rss_bytes": 41926656,
+        "max_host_footprint_bytes": 31343288,
+        "max_worker_count": 0,
+        "samples": 137
+      }
+    },
+    "identities": {
+      "67638:22007585800287": {
+        "pid": 67638,
+        "parent": 0,
+        "started": 22007585800287,
+        "max_rss_bytes": 42074112,
+        "max_footprint_bytes": 31621816,
+        "lifetime_peak_footprint_bytes": 31654584
+      },
+      "68106:22008154197552": {
+        "pid": 68106,
+        "parent": 67638,
+        "started": 22008154197552,
+        "max_rss_bytes": 691830784,
+        "max_footprint_bytes": 283280296,
+        "lifetime_peak_footprint_bytes": 305365760
+      },
+      "68711:22008789254634": {
+        "pid": 68711,
+        "parent": 67638,
+        "started": 22008789254634,
+        "max_rss_bytes": 763052032,
+        "max_footprint_bytes": 295322488,
+        "lifetime_peak_footprint_bytes": 303006584
+      },
+      "69434:22009604538815": {
+        "pid": 69434,
+        "parent": 67638,
+        "started": 22009604538815,
+        "max_rss_bytes": 1265369088,
+        "max_footprint_bytes": 1168950856,
+        "lifetime_peak_footprint_bytes": 1168950856
+      },
+      "72122:22012656366663": {
+        "pid": 72122,
+        "parent": 67638,
+        "started": 22012656366663,
+        "max_rss_bytes": 728694784,
+        "max_footprint_bytes": 260375392,
+        "lifetime_peak_footprint_bytes": 307102464
+      },
+      "73477:22014221625678": {
+        "pid": 73477,
+        "parent": 67638,
+        "started": 22014221625678,
+        "max_rss_bytes": 519225344,
+        "max_footprint_bytes": 264880992,
+        "lifetime_peak_footprint_bytes": 294830872
+      },
+      "73891:22014682883963": {
+        "pid": 73891,
+        "parent": 67638,
+        "started": 22014682883963,
+        "max_rss_bytes": 531333120,
+        "max_footprint_bytes": 484918352,
+        "lifetime_peak_footprint_bytes": 488408048
+      },
+      "74166:22015070731861": {
+        "pid": 74166,
+        "parent": 67638,
+        "started": 22015070731861,
+        "max_rss_bytes": 611385344,
+        "max_footprint_bytes": 287015824,
+        "lifetime_peak_footprint_bytes": 307053264
+      }
+    },
+    "errors": [],
+    "root_pid": 67638,
+    "max_sample_gap_ms": 123.369,
+    "exit_code": 0,
+    "elapsed_seconds": 343.925
+  },
+  "validation": {
+    "source_digests_match": true,
+    "packaged_workers_reaped": true,
+    "candidate_and_tokens_cache_intact": true,
+    "production_catalog_matches_baseline": true,
+    "clippy_all_targets": true,
+    "rust_fmt": true
+  },
+  "limitations": [
+    "Debug desktop actor test host, not shipping GUI process; release CPU workers",
+    "No WebView, microphone, 30-minute continuous physical capture or minimum-device validation",
+    "3350 sampling attempts; 40 incomplete process-retirement samples excluded from aggregate peaks",
+    "Sequential libproc reads are near-simultaneous, not an atomic memory snapshot; peaks may miss shorter allocations",
+    "RSS can count shared pages in more than one process",
+    "Auto-language public repeated English, not natural-speech quality evaluation"
+  ]
+}

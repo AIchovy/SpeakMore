@@ -1,0 +1,235 @@
+:root,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  overflow: hidden;
+  background: transparent;
+}
+body {
+  padding: 8px;
+  color-scheme: dark;
+  user-select: none;
+}
+.meeting-panel {
+  width: 364px;
+  height: 180px;
+  padding: 12px;
+  border: 1px solid #454545;
+  border-radius: 16px;
+  color: #f5f5f5;
+  background: #171717;
+  font-size: 12px;
+}
+.meeting-panel-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 22px;
+}
+.meeting-panel-drag {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  align-items: center;
+  gap: 7px;
+  cursor: grab;
+  white-space: nowrap;
+}
+.meeting-panel-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ff746b;
+  flex-shrink: 0;
+}
+.meeting-panel-dot[data-idle='true'] {
+  background: #f5cc87;
+}
+.meeting-panel-time {
+  font-size: 17px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  line-height: 22px;
+}
+.meeting-panel button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: 0;
+  border-radius: 7px;
+  height: 30px;
+  padding: 0 9px;
+  color: #eee;
+  background: #333;
+  cursor: pointer;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.meeting-panel button:hover {
+  background: #484848;
+}
+.meeting-panel button:focus-visible {
+  outline: 2px solid #eee;
+  outline-offset: 2px;
+}
+.meeting-panel button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.meeting-panel button svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+.meeting-panel .meeting-panel-hide {
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  background: transparent;
+  color: #bdbdbd;
+}
+.meeting-panel-context {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 16px;
+  margin-top: 6px;
+  color: #bdbdbd;
+}
+.meeting-panel-title {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.meeting-panel-levels,
+.meeting-panel-source {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.meeting-panel-source {
+  gap: 4px;
+}
+.meeting-panel-source svg {
+  width: 13px;
+  height: 13px;
+}
+.meeting-panel-meter {
+  display: flex;
+  gap: 2px;
+}
+.meeting-panel-meter i {
+  display: block;
+  width: 2px;
+  height: 10px;
+  background: #454545;
+  border-radius: 1px;
+}
+.meeting-panel-meter i[data-filled='true'] {
+  background: #ddd;
+}
+.meeting-panel-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+}
+.meeting-panel .meeting-panel-finish {
+  background: #f5f5f5;
+  color: #171717;
+}
+.meeting-panel .meeting-panel-finish:hover {
+  background: #ddd;
+}
+.meeting-panel .meeting-panel-open {
+  margin-left: auto;
+  background: transparent;
+  color: #bdbdbd;
+  padding-right: 0;
+}
+.meeting-panel-note {
+  margin: 7px 0 0;
+  font-size: 11px;
+  line-height: 15px;
+  color: #bdbdbd;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.meeting-panel-note[role='alert'] {
+  color: #ffb7ae;
+}
+.meeting-panel-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.meeting-panel[data-editing='true'] {
+  height: 308px;
+}
+.meeting-panel-note-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+.meeting-panel-note-actions button {
+  height: 28px;
+}
+.meeting-panel-editor {
+  margin-top: 8px;
+}
+.meeting-panel-editor textarea {
+  display: block;
+  width: 100%;
+  height: 66px;
+  resize: none;
+  border: 1px solid #666;
+  border-radius: 7px;
+  padding: 8px;
+  background: #232323;
+  color: #f5f5f5;
+  font-size: 12px;
+  line-height: 20px;
+  user-select: text;
+}
+.meeting-panel-editor textarea::placeholder {
+  color: #aaa;
+}
+.meeting-panel-editor textarea:focus {
+  outline: 2px solid #eee;
+  outline-offset: 1px;
+}
+.meeting-panel-note-meta,
+.meeting-panel-note-submit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  font-size: 11px;
+  line-height: 16px;
+  color: #bdbdbd;
+}
+.meeting-panel-note-meta {
+  margin-top: 4px;
+}
+.meeting-panel-note-submit {
+  margin-top: 4px;
+}
+.meeting-panel-note-submit button {
+  background: #f5f5f5;
+  color: #171717;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

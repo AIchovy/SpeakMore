@@ -1,0 +1,7 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "recording-hud",
+  "description": "The bundled recording HUD listens to recording state; native commands restrict it to status, stop/cancel by session ID, and closing its preview.",
+  "windows": ["hud"],
+  "permissions": ["core:event:allow-listen", "core:event:allow-unlisten"]
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "code": "zh-CN",
+    "name": "简体中文",
+    "englishName": "Chinese (Simplified)"
+  },
+  {
+    "code": "zh-TW",
+    "name": "繁體中文",
+    "englishName": "Chinese (Traditional)"
+  },
+  {
+    "code": "en",
+    "name": "英语",
+    "englishName": "English"
+  },
+  {
+    "code": "ja",
+    "name": "日语",
+    "englishName": "Japanese"
+  },
+  {
+    "code": "ko",
+    "name": "韩语",
+    "englishName": "Korean"
+  },
+  {
+    "code": "fr",
+    "name": "法语",
+    "englishName": "French"
+  },
+  {
+    "code": "de",
+    "name": "德语",
+    "englishName": "German"
+  },
+  {
+    "code": "es",
+    "name": "西班牙语",
+    "englishName": "Spanish"
+  },
+  {
+    "code": "pt",
+    "name": "葡萄牙语",
+    "englishName": "Portuguese"
+  },
+  {
+    "code": "it",
+    "name": "意大利语",
+    "englishName": "Italian"
+  },
+  {
+    "code": "ru",
+    "name": "俄语",
+    "englishName": "Russian"
+  },
+  {
+    "code": "ar",
+    "name": "阿拉伯语",
+    "englishName": "Arabic"
+  },
+  {
+    "code": "hi",
+    "name": "印地语",
+    "englishName": "Hindi"
+  },
+  {
+    "code": "vi",
+    "name": "越南语",
+    "englishName": "Vietnamese"
+  },
+  {
+    "code": "th",
+    "name": "泰语",
+    "englishName": "Thai"
+  },
+  {
+    "code": "id",
+    "name": "印度尼西亚语",
+    "englishName": "Indonesian"
+  }
+]

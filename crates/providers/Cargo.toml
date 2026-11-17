@@ -1,0 +1,22 @@
+[package]
+name = "speakmore-providers"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+uuid.workspace = true
+url = "2.5"
+zeroize = "1.9"
+regex = "1.13"
+sha2 = "0.10"
+reqwest = { version = "=0.13.5", default-features = false, features = ["rustls", "stream"] }
+tokio = { version = "1", features = ["time", "sync", "rt", "macros"] }
+tokio-util = { version = "0.7", features = ["rt"] }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["net", "io-util", "rt-multi-thread", "test-util"] }

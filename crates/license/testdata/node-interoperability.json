@@ -1,0 +1,5 @@
+{
+  "note": "Synthetic test token signed independently with Node crypto. Private key was not persisted. Never trusted by the app.",
+  "public_key": "W7bQNuDMYqsryZtLgW3xGsbeDkhu1UXWbKZLlUfyHM8",
+  "token": "ewogImlzc3VlZF9hdCI6MTc4OTQwMDAwMCwgImVkaXRpb24iOiJwcm8iLCAicHJvZHVjdCI6InNwZWFrbW9yZSIsICJtYWpvcl92ZXJzaW9uIjoxLCAibGljZW5zZV9pZCI6ImFhY2IwMWE2LWI1OTktNDg5OC05MmViLTQ0MmFlZjNkYzYwMSIsICJrZXlfaWQiOiJub2RlLWludGVyb3AtZml4dHVyZSIsICJzY2hlbWEiOjEKfQ.m8JLaTAbvzGrpeM93VMVqnBzfdhAMwuFhRExVXTLUWiIhdFIg4HJHsq4eZc8XOWcF49R4r_0TJHfRJqHBk9aDQ"
+}

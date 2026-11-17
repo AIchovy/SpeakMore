@@ -1,0 +1,60 @@
+[package]
+name = "speakmore-asr-worker"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+autobins = false
+
+[[bin]]
+name = "speakmore-asr-worker"
+path = "src/main.rs"
+required-features = ["whisper"]
+
+[[bin]]
+name = "speakmore-sensevoice-worker"
+path = "src/sensevoice_main.rs"
+required-features = ["sensevoice"]
+
+[[test]]
+name = "additional_models"
+required-features = ["sensevoice"]
+
+[[test]]
+name = "process"
+required-features = ["whisper"]
+
+[[test]]
+name = "sensevoice_process"
+required-features = ["sensevoice"]
+
+[[test]]
+name = "sensevoice_tiled"
+required-features = ["whisper", "sensevoice"]
+
+[[test]]
+name = "quality_corpus"
+required-features = ["whisper", "sensevoice"]
+
+[features]
+default = ["whisper"]
+whisper = ["dep:whisper-rs"]
+sensevoice = ["dep:speakmore-sensevoice"]
+metal = ["whisper", "whisper-rs/metal"]
+vulkan = ["whisper", "whisper-rs/vulkan"]
+
+[dependencies]
+speakmore-protocol = { path = "../protocol" }
+whisper-rs = { version = "=0.16.0", path = "../../vendor/whisper-rs", default-features = false, optional = true }
+sha2 = "0.10"
+uuid.workspace = true
+
+[target.'cfg(all(target_os = "macos", target_arch = "aarch64"))'.dependencies]
+speakmore-sensevoice = { path = "../sensevoice", optional = true }
+
+[dev-dependencies]
+speakmore-models = { path = "../models" }
+speakmore-audio = { path = "../audio" }
+speakmore-worker-supervisor = { path = "../worker-supervisor" }
+tempfile = "3"
+hound = "3.5"
+serde_json.workspace = true

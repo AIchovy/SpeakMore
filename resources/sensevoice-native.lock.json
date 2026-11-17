@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "sherpa_version": "1.13.8",
+  "target": "aarch64-apple-darwin",
+  "directory": "sherpa-onnx-v1.13.8-osx-arm64-static-no-tts-lib",
+  "archive": {
+    "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/v1.13.8/sherpa-onnx-v1.13.8-osx-arm64-static-no-tts-lib.tar.bz2",
+    "size_bytes": 19756929,
+    "sha256": "3d7f9b8a496694af13d9802c33b8133231e397bdef302f543d19468765e83136"
+  },
+  "header": {
+    "url": "https://raw.githubusercontent.com/k2-fsa/sherpa-onnx/v1.13.8/sherpa-onnx/c-api/c-api.h",
+    "size_bytes": 167657,
+    "sha256": "2a1b95084be8fd1deb3228fcad2fd3f7f0258b64582f7402281ec174c7b7f4ce"
+  },
+  "libraries": [
+    {
+      "filename": "libkaldi-decoder-core.a",
+      "size_bytes": 729056,
+      "sha256": "754401c2df5706886b715208f8eb6d8673dba82302c5ed52d5b210e64ed30a94"
+    },
+    {
+      "filename": "libkaldi-native-fbank-core.a",
+      "size_bytes": 233656,
+      "sha256": "3a6d7978b7e7bb689ad33ebc0c53fef22c7bbf2c3637fff2411982e657d6a279"
+    },
+    {
+      "filename": "libkissfft-float.a",
+      "size_bytes": 19944,
+      "sha256": "87ea03a4088cbcbd40628072a75bab890d7e121961f1dd3476ab861c5ff7e367"
+    },
+    {
+      "filename": "libonnxruntime.a",
+      "size_bytes": 75070504,
+      "sha256": "589e781d544d85267be5d7e74eae68fddd40ba41bf27e9961f867378170f8802"
+    },
+    {
+      "filename": "libsherpa-onnx-c-api.a",
+      "size_bytes": 158664,
+      "sha256": "5d77bdfbf1f606bcbd3587d67c4e52deb59dc735490bcbc7b387b21812b68300"
+    },
+    {
+      "filename": "libsherpa-onnx-core.a",
+      "size_bytes": 11315448,
+      "sha256": "031c4c391c876b827fea8ff174a67357c9faf3508ed2cf8adc0f58ec74f18f5d"
+    },
+    {
+      "filename": "libsherpa-onnx-cxx-api.a",
+      "size_bytes": 150408,
+      "sha256": "5f426d0cce5bfea0aa43998716b39e781ebe33ce06058df7c9b826f84a1f386f"
+    },
+    {
+      "filename": "libsherpa-onnx-fst.a",
+      "size_bytes": 2535400,
+      "sha256": "d365cee4f56f7f8b843528cd4ec05ce27279b6112321fefa876d4cb5487c0778"
+    },
+    {
+      "filename": "libsherpa-onnx-fstfar.a",
+      "size_bytes": 55920,
+      "sha256": "bd2b45ae4a5f7a1845e5ddaa534ab9f6e783e56d99d142873da2ffa7b575d431"
+    },
+    {
+      "filename": "libsherpa-onnx-kaldifst-core.a",
+      "size_bytes": 1585872,
+      "sha256": "5b8752726f4100204dc3dda71fd01c667c9aa62e941506a006b24683a2ce9e1e"
+    },
+    {
+      "filename": "libsherpa-onnx-portaudio_static.a",
+      "size_bytes": 124128,
+      "sha256": "8248e045b76a534862953084d3e5c961b9e60b0473a71fdd4cafaa551a0ffbdb"
+    },
+    {
+      "filename": "libssentencepiece_core.a",
+      "size_bytes": 151000,
+      "sha256": "cccd597d9966a69be0923f5ba5aaed9b91cbc5ba8f5bf09e7c639f200641bbb7"
+    }
+  ],
+  "onnxruntime_version": "1.28.2"
+}

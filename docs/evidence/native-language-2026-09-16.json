@@ -1,0 +1,146 @@
+{
+  "date": "2026-09-16",
+  "purpose": "native_language_initialization_and_menus",
+  "release_gate_passed": false,
+  "system_preferred_language": "zh-Hans-CN",
+  "checks": {
+    "fresh_start_zh": true,
+    "native_edit_menu_zh_and_en": true,
+    "menu_language_changes_live": true,
+    "reopen_saved_en_on_chinese_system": true,
+    "reopen_saved_zh": true,
+    "quit_via_native_menu": true,
+    "select_closes_and_focus_restores_in_both_languages": true,
+    "screenshots_visually_inspected": true,
+    "test_app_exited": true
+  },
+  "iterations": [
+    {
+      "stage": "initial menu implementation",
+      "main_sha256": "cfe545f97a19e701a3c7a695eba76867134dcefa5a522b7ba6e1b201e6b53d64",
+      "finding": "Closed Select exit animation suspended in background WebView; list remained modal."
+    },
+    {
+      "stage": "remove Select exit animation",
+      "main_sha256": null,
+      "finding": "List closed; async save disabled trigger during close autofocus, leaving page focus."
+    },
+    {
+      "stage": "restore trigger after save if no other control focused",
+      "main_sha256": "219f0fcf0732945677149fa0ff0805f08b4e2f47e66893fd9a18b7fd99befebe",
+      "finding": "Both language directions close, restore trigger focus and update native menu labels."
+    }
+  ],
+  "bundles": {
+    "SpeakMore": {
+      "identifier": "com.speakmore.desktop",
+      "main_sha256": "800e2cebd7b7c33fd06b4383ee871860dfbee0f6c0693b45c8b89359bdb9886f",
+      "deep_strict_codesign": "passed",
+      "signature": "ad-hoc",
+      "notarized": false,
+      "languages": [
+        "en",
+        "zh-Hans"
+      ],
+      "microphone_descriptions_match_source": true
+    },
+    "SpeakMore Locale Check": {
+      "identifier": "com.speakmore.localecheck.20260916",
+      "main_sha256": "219f0fcf0732945677149fa0ff0805f08b4e2f47e66893fd9a18b7fd99befebe",
+      "deep_strict_codesign": "passed",
+      "signature": "ad-hoc",
+      "notarized": false,
+      "languages": [
+        "en",
+        "zh-Hans"
+      ],
+      "microphone_descriptions_match_source": true
+    }
+  },
+  "frozen_input_check_sha256": "d6ada176f445a923f8e43550991be5248c8139e957f25b3364f660a6e3c03f26",
+  "verification": {
+    "core_tests": 54,
+    "desktop_tests": {
+      "initial_passed": 82,
+      "initial_local_http_sandbox_blocked": 4,
+      "local_http_rerun_passed": 4,
+      "ignored": 14,
+      "features": "session-fixtures"
+    },
+    "frontend_tests": 41,
+    "clippy": "all targets / session-fixtures,target-audit,model-audio-check / -D warnings passed",
+    "rustfmt": "passed",
+    "typescript_vite": "passed",
+    "plist_lint": "passed"
+  },
+  "isolated_data": {
+    "settings": [
+      "zh-CN",
+      "auto",
+      7,
+      0,
+      "local_only"
+    ],
+    "rows": {
+      "transcriptions": 0,
+      "usage_events": 0,
+      "dictionary_entries": 0,
+      "providers": 0,
+      "models": 0
+    },
+    "integrity": "ok"
+  },
+  "source_files": {
+    "crates/core/src/storage.rs": "f815b0ea4120091d94260725c37e3dacd0b04e7ff84765aab05d08d14fda6892",
+    "crates/core/src/storage/startup.rs": "ab0f7b4bec47941c7fa97b347e46240256b38b33485f4041509f0b423c1b5394",
+    "crates/core/src/storage/startup/tests.rs": "052db2fb42dc7c90bf7359da126b3a6c111db03917da76c65ac1c0e5076aff34",
+    "crates/core/src/storage/app_rules.rs": "7b0817323aef88030a92844f7b9355a658174e4f6c68cb590983abd41781d24e",
+    "src-tauri/src/native_locale.rs": "d0ae0a9d1619f750e064c6b50366c874af227ec9b02e5fc10410df171e577024",
+    "src-tauri/src/native_menus.rs": "6f7e2ac24eeec379b613351e281c9321c2775fa8b191ebc5ed4ca166bbe48c52",
+    "src-tauri/src/desktop_controls.rs": "385b593c855af09beccb724656aeeea2c346129c695bc4a1e6032b0387be8e39",
+    "src-tauri/src/storage_startup.rs": "5773e7cc4bbf8b1d0ada1de818767b9e168f2bf5841bf8dcea66486fb1786e3f",
+    "src-tauri/src/lib.rs": "d72f98dc496af5e157657f20c11b88702ad4f27c44199756f3c0af20e3b0b617",
+    "src-tauri/Cargo.toml": "b6e677bb8e4d1a9a15edde869a292ae4d54c9d9f7eea808cf3b574a53b9da8e2",
+    "src-tauri/Info.plist": "3e3e95986b4a324d888814565368cb91e6b8941b51809976d7b402be6acade77",
+    "src-tauri/tauri.conf.json": "3d13bcc4512de56038523eb61740c9d3182ee9ec37ca17dc64a0439f16cb8a0f",
+    "src-tauri/locales/en.lproj/InfoPlist.strings": "132dea22cd3b446d8bb12607acbe2af69b24a62bbaec73fe2307231d0eb21e0a",
+    "src-tauri/locales/zh-Hans.lproj/InfoPlist.strings": "5fe2460b5ff57dc5c9e833c184801556747dc3a20fea1164ce95c6c0ed9b9ae0",
+    "src/components/common.tsx": "d4560549835d124c441786d68e4ac693896bc26f35bc8d386664da4d64ad5ac6",
+    "src/components/ui/select.tsx": "cf565fa833d4bc8bf0ea0bd790e79a9a10c8eba791f6f2e8c72b20c928880511"
+  },
+  "raw_observations_and_logs": {
+    ".cache/native-locale-check/edit-en.txt": "273fa2464deb6b2ef68588def282f03c15013fb9212d47a59e613532da402b63",
+    ".cache/native-locale-check/edit-zh.txt": "b4263a94ec72b9b500f95ccd9122470ef3e746df2289f480f5df276d639adaa2",
+    ".cache/native-locale-check/english-menu-with-pending-select.txt": "d4f8ae0695d984e0c6c283b1c7473ffff902235db7805e316d5cc9dc34cde093",
+    ".cache/native-locale-check/final-en.txt": "f40d2eff3f3e73208597911305167380458ce1d4841146e601ee8795707660e8",
+    ".cache/native-locale-check/final-zh.txt": "3d1cbdeea0ac1ac3f8be07c460d8ebdade91ac92e6caae485a523e587a39eb0e",
+    ".cache/native-locale-check/first-zh.txt": "195021ceef3074ec54bd6532db5a8909382e7a68c6867299ba92604a4e037e4e",
+    ".cache/native-locale-check/reopen-en.txt": "7e06ccef5e0043327ac3a0b742ed2912070524dcb8fb252f78d60b0523959548",
+    ".cache/native-locale-check/reopen-zh.txt": "20bb2cab1bd43d2d0ff629232391caab096467da432d37112545d6bf02ce1205",
+    ".cache/native-locale-check/select-closed-zh.txt": "a58600f54e8cc78171316860ed86416def9be0541957bbde3e84ce9b5ce5d8c8",
+    ".cache/native-locale-check/build-focus-fix.log": "a5efc04fac0d5809bc14a264f9824de674b10a4c1bfd6da8cc60f8c09e01ae23",
+    ".cache/native-locale-check/build-select-fix.log": "692cfc1179b76e59ba48c565cd4d4666e3584f3f43b320ae9a6afbf2e9cd78e4",
+    ".cache/native-locale-check/build.log": "a780bff63380c33ca2033b42cd236e8edf6ee298d26ff24c2e64a4cbb7d940fa",
+    ".cache/native-locale-check/clippy.log": "b7c1fb3e9c57665340f16e0c98af0c2de39ee790892f9b6eb21a4f6e37d0fb79",
+    ".cache/native-locale-check/frontend-tests-final.log": "56648fa5844780c4b34267839a467537e293f6656bca67c3fd2eb77310b3fb63",
+    ".cache/native-locale-check/frontend-tests.log": "bb3d4eb3ec18a5a6aedca2a728aafd33302767057fe72fdd122a83a402cf5899",
+    ".cache/native-locale-check/normal-build-final.log": "7e3cccb3c0a82f97ed3d3e3c7a0ed511a68c96d13b251586fb0e45f5c3f67cec",
+    ".cache/native-locale-check/normal-build.log": "15ff240f7b41bd2abd3fc6d80cd62418a46bbc9f2f80747a298b208f35df5913",
+    ".cache/asr-quality/run-v3-turbo/core-tests.log": "a01041e4202cb93348acf9cb78d6184b5dc7311ed68247c92e36b3207fe5d5a9",
+    ".cache/asr-quality/run-v3-turbo/desktop-tests.log": "17c4d563f72af9ef1f21aff55f6b5cfd2b7a15117950299c39914568cdcce015",
+    ".cache/asr-quality/run-v3-turbo/desktop-local-http-tests.log": "22828ea6d9670aeaa412655736836eb14987c0f364aa6a00c61fb95fd0caf9f9"
+  },
+  "screenshots": {
+    "docs/screenshots/native-locale-en.jpeg": "6f164dfa660f371d84648eb1e8c6085120d4c70a4606174b3117de940837f845",
+    "docs/screenshots/native-locale-zh.jpeg": "65cebf9335606d091498dfe3851d167a2493cb618285ee7bae6e8cf3c329df34"
+  },
+  "not_tested": [
+    "English OS first launch",
+    "TCC microphone prompt display",
+    "Physical keyboard traversal and all menu actions",
+    "Tray icon interaction and all live recording phases",
+    "VoiceOver and 200% zoom",
+    "Other floating dialogs and multi-monitor behavior"
+  ],
+  "user_data_or_permission_changes": false
+}

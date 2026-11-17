@@ -1,0 +1,1 @@
+{"identifier":"captions","description":"Local caption display and native panel controls","windows":["captions"],"permissions":["core:event:allow-listen","core:event:allow-unlisten"]}

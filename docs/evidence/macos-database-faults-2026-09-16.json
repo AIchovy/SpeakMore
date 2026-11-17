@@ -1,0 +1,134 @@
+{
+  "date": "2026-09-16",
+  "synthetic_only": true,
+  "scope": "Real Store::persist_generated and Store::open on bounded APFS; test-only child",
+  "frozen_test_binary_sha256": "f876379e8b9872d13adf399e4c95773fab5fe077f59031e7b3a516f84583ec14",
+  "raw_file": "macos-database-faults-2026-09-16.raw.json.gz",
+  "raw_sha256": "ae6aeff84a559d74e3b440788073bba5aa436fc22cc1a08bba59c163827b20a0",
+  "raw_gzip_sha256": "d25ccea64a49d8e5bd2802977b41176550450b5ba4144093095154249c6be56f",
+  "cases": [
+    {
+      "name": "history-full",
+      "passed": true,
+      "fault": {
+        "volume": {
+          "bytes_written": 489041920,
+          "errno": 28,
+          "capacity_bytes": 536829952,
+          "device": 16777239,
+          "page_allocation_errno": 28,
+          "released_before_operation": 0,
+          "available_before_operation": 11247616
+        },
+        "child": {
+          "exit_code": 0,
+          "events": [
+            {
+              "checkpoint": "before-write"
+            },
+            {
+              "error": {
+                "code": "StorageUnavailable",
+                "retryable": true,
+                "userMessage": "\u65e0\u6cd5\u8bfb\u5199\u672c\u5730\u6570\u636e\uff0c\u8bf7\u68c0\u67e5\u78c1\u76d8\u7a7a\u95f4\u540e\u91cd\u8bd5\u3002"
+              },
+              "write_ok": false
+            },
+            {
+              "history_present": {
+                "Ok": false
+              },
+              "usage_recorded": {
+                "Ok": false
+              }
+            }
+          ],
+          "log": "\nrunning 1 test\ntest model_registry::fault_tests::isolated_filesystem_child ... SPEAKMORE_FS_FAULT {\"checkpoint\":\"before-write\"}\nSPEAKMORE_FS_FAULT {\"error\":{\"code\":\"StorageUnavailable\",\"retryable\":true,\"userMessage\":\"\u65e0\u6cd5\u8bfb\u5199\u672c\u5730\u6570\u636e\uff0c\u8bf7\u68c0\u67e5\u78c1\u76d8\u7a7a\u95f4\u540e\u91cd\u8bd5\u3002\"},\"write_ok\":false}\nSPEAKMORE_FS_FAULT {\"history_present\":{\"Ok\":false},\"usage_recorded\":{\"Ok\":false}}\nok\n\ntest result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 99 filtered out; finished in 0.97s\n\n"
+        }
+      }
+    },
+    {
+      "name": "committed-kill",
+      "passed": true,
+      "uncheckpointed_wal": {
+        "bytes": 45352,
+        "sha256": "ae290f492b8e6593aca1f2395d979f42b913d1dfbc8a4d191d9c8b6045c5e761"
+      },
+      "fault": {
+        "child": {
+          "exit_code": -9,
+          "events": [
+            {
+              "new_history": true,
+              "write_ok": true
+            },
+            {
+              "checkpoint": "after-write"
+            }
+          ],
+          "log": "\nrunning 1 test\ntest model_registry::fault_tests::isolated_filesystem_child ... SPEAKMORE_FS_FAULT {\"new_history\":true,\"write_ok\":true}\nSPEAKMORE_FS_FAULT {\"checkpoint\":\"after-write\"}\n"
+        }
+      }
+    },
+    {
+      "name": "backup-full",
+      "passed": true,
+      "source_bytes": 17137664,
+      "prior_backup": {
+        "bytes": 17137664,
+        "sha256": "afd5574cf7ab713236a483e05b568fcfc94c787685c82a306a76e1255d536835"
+      },
+      "fault": {
+        "volume": {
+          "bytes_written": 452403200,
+          "errno": 28,
+          "capacity_bytes": 536829952,
+          "device": 16777239,
+          "page_allocation_errno": 28,
+          "released_before_operation": 2097152,
+          "available_before_operation": 13312000
+        },
+        "child": {
+          "exit_code": 0,
+          "events": [
+            {
+              "checkpoint": "before-open"
+            },
+            {
+              "error": {
+                "code": "DatabaseBackupFailed",
+                "retryable": false,
+                "userMessage": "\u65e0\u6cd5\u5b8c\u6210\u5347\u7ea7\u524d\u5907\u4efd\uff0c\u5df2\u505c\u6b62\u6570\u636e\u5347\u7ea7\u3002\u8bf7\u68c0\u67e5\u53ef\u7528\u7a7a\u95f4\u548c\u76ee\u5f55\u6743\u9650\u3002"
+              },
+              "opened": false
+            }
+          ],
+          "log": "\nrunning 1 test\ntest model_registry::fault_tests::isolated_filesystem_child ... SPEAKMORE_FS_FAULT {\"checkpoint\":\"before-open\"}\nSPEAKMORE_FS_FAULT {\"error\":{\"code\":\"DatabaseBackupFailed\",\"retryable\":false,\"userMessage\":\"\u65e0\u6cd5\u5b8c\u6210\u5347\u7ea7\u524d\u5907\u4efd\uff0c\u5df2\u505c\u6b62\u6570\u636e\u5347\u7ea7\u3002\u8bf7\u68c0\u67e5\u53ef\u7528\u7a7a\u95f4\u548c\u76ee\u5f55\u6743\u9650\u3002\"},\"opened\":false}\nok\n\ntest result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 99 filtered out; finished in 1.09s\n\n"
+        }
+      }
+    }
+  ],
+  "limits": [
+    "No user database or microphone accessed",
+    "No physical power loss or drive failure",
+    "SIGKILL occurs after Store reports a committed write, not inside a transaction",
+    "No disk-full injection after a successful backup or during migration commit"
+  ],
+  "volume_detached": true,
+  "sources": {
+    "scripts/diagnostics/macos-database-faults.py": "e0fe6221e42c059693b140c4d3bbdfbf490553e14fd96635b5cc729750fad29c",
+    "scripts/diagnostics/macos-filesystem-faults.py": "a9b7f54df1ac1723fc78d309ca9d917beea3c0b3be45594c5a28fa3bef50fb98",
+    "src-tauri/src/model_registry/fault_tests.rs": "a16987a7c17def5312773579646ed9fd22887279bbbc0bc2076970c087947a3f",
+    "src-tauri/src/model_registry/fault_tests/database.rs": "41d52d00ef37d5f5be64ec80a864c733d54eebf365ea13378ef521e37a9b042d",
+    "crates/core/src/storage.rs": "34dd417129fe3fb912d16d831839c7993e6311a23a881f58009b4111a1c207f8",
+    "crates/core/src/storage/startup.rs": "5180f9e4cd8e655b54754124de1ee3e5975aae37db57f4d0c471eee56e96d050",
+    "migrations/007_polish_reason.sql": "accb9d88897387961ab595f091af229a60312170f4dd405166bb548f7704b384",
+    "Cargo.lock": "54347c7a78b3f4a724f6fbcf139117945f1ee647ea16a9e11ccf535662e77b69"
+  },
+  "post_run_guard_check": {
+    "file": "scripts/diagnostics/macos-database-faults.py",
+    "sha256_after": "5651f1b21f346f9182bb275c12c3ecab1e7ac7291f52df72c200e143e8e368b1",
+    "verified": "Existing reserve file rejected with EEXIST, unchanged; no filler created",
+    "note": "Only cleanup ownership changed after three fault cases; the success path and Rust fixture are unchanged."
+  }
+}
